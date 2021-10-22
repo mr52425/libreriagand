@@ -1,0 +1,10 @@
+C:\Users\52562\OneDrive\Documentos\proyectolibreriaOF1\bin\Debug\proyectolibreriaOF1.exe.config
+C:\Users\52562\OneDrive\Documentos\proyectolibreriaOF1\bin\Debug\proyectolibreriaOF1.exe
+C:\Users\52562\OneDrive\Documentos\proyectolibreriaOF1\bin\Debug\proyectolibreriaOF1.pdb
+C:\Users\52562\OneDrive\Documentos\proyectolibreriaOF1\obj\Debug\proyectolibreriaOF1.csproj.AssemblyReference.cache
+C:\Users\52562\OneDrive\Documentos\proyectolibreriaOF1\obj\Debug\proyectolibreriaOF1.Form1.resources
+C:\Users\52562\OneDrive\Documentos\proyectolibreriaOF1\obj\Debug\proyectolibreriaOF1.Properties.Resources.resources
+C:\Users\52562\OneDrive\Documentos\proyectolibreriaOF1\obj\Debug\proyectolibreriaOF1.csproj.GenerateResource.cache
+C:\Users\52562\OneDrive\Documentos\proyectolibreriaOF1\obj\Debug\proyectolibreriaOF1.csproj.CoreCompileInputs.cache
+C:\Users\52562\OneDrive\Documentos\proyectolibreriaOF1\obj\Debug\proyectolibreriaOF1.exe
+C:\Users\52562\OneDrive\Documentos\proyectolibreriaOF1\obj\Debug\proyectolibreriaOF1.pdb
