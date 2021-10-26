@@ -22,3 +22,17 @@ C:\Users\52562\OneDrive\Escritorio\libreriagand\obj\Debug\proyectolibreriaOF1.so
 C:\Users\52562\OneDrive\Escritorio\libreriagand\obj\Debug\proyectolibreriaOF1.consultarcliente.resources
 C:\Users\52562\OneDrive\Escritorio\libreriagand\obj\Debug\proyectolibreriaOF1.editarlibros.resources
 C:\Users\52562\OneDrive\Escritorio\libreriagand\obj\Debug\proyectolibreriaOF1.resgistrar_inventario.resources
+C:\Users\52562\OneDrive\Imágenes\libreriagand\bin\Debug\proyectolibreriaOF1.exe.config
+C:\Users\52562\OneDrive\Imágenes\libreriagand\bin\Debug\proyectolibreriaOF1.exe
+C:\Users\52562\OneDrive\Imágenes\libreriagand\bin\Debug\proyectolibreriaOF1.pdb
+C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.csproj.AssemblyReference.cache
+C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.consultarcliente.resources
+C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.editarlibros.resources
+C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.Form1.resources
+C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.resgistrar_inventario.resources
+C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.solicitarlibro.resources
+C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.Properties.Resources.resources
+C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.csproj.GenerateResource.cache
+C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.csproj.CoreCompileInputs.cache
+C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.exe
+C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.pdb
