@@ -293,6 +293,7 @@ namespace proyectolibreriaOF1
             this.ventasDataGridView.RowTemplate.Height = 24;
             this.ventasDataGridView.Size = new System.Drawing.Size(1282, 519);
             this.ventasDataGridView.TabIndex = 2;
+            this.ventasDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ventasDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
