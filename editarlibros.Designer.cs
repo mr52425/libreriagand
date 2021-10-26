@@ -59,35 +59,35 @@ namespace proyectolibreriaOF1
             this.consultarComprasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1201, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1201, 30);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // solicitarLibrosToolStripMenuItem
             // 
             this.solicitarLibrosToolStripMenuItem.Name = "solicitarLibrosToolStripMenuItem";
-            this.solicitarLibrosToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
+            this.solicitarLibrosToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.solicitarLibrosToolStripMenuItem.Text = "solicitar  libros";
             this.solicitarLibrosToolStripMenuItem.Click += new System.EventHandler(this.solicitarLibrosToolStripMenuItem_Click);
             // 
             // registrarToolStripMenuItem
             // 
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.registrarToolStripMenuItem.Text = "registrar inventario";
             this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.consultarToolStripMenuItem.Text = "consultar clientes";
             this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
             // consultarComprasToolStripMenuItem
             // 
             this.consultarComprasToolStripMenuItem.Name = "consultarComprasToolStripMenuItem";
-            this.consultarComprasToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.consultarComprasToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.consultarComprasToolStripMenuItem.Text = "consultar compras";
             this.consultarComprasToolStripMenuItem.Click += new System.EventHandler(this.consultarComprasToolStripMenuItem_Click);
             // 
@@ -134,36 +134,36 @@ namespace proyectolibreriaOF1
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(113, 144);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.Size = new System.Drawing.Size(110, 17);
             this.label2.TabIndex = 9;
-            this.label2.Text = "label2";
+            this.label2.Text = "nombre del libro";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(113, 209);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.Size = new System.Drawing.Size(59, 17);
             this.label3.TabIndex = 10;
-            this.label3.Text = "label3";
+            this.label3.Text = "sipnosis";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(113, 284);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.Size = new System.Drawing.Size(53, 17);
             this.label4.TabIndex = 11;
-            this.label4.Text = "label4";
+            this.label4.Text = "edicion";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(113, 378);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 17);
+            this.label5.Size = new System.Drawing.Size(35, 17);
             this.label5.TabIndex = 12;
-            this.label5.Text = "label5";
+            this.label5.Text = "anio";
             // 
             // label6
             // 
@@ -179,7 +179,7 @@ namespace proyectolibreriaOF1
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 14;
-            this.button1.Text = "button1";
+            this.button1.Text = "enviar";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // editarlibros
