@@ -34,6 +34,7 @@ namespace proyectolibreriaOF1
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
             this.TituloLibreria2 = new System.Windows.Forms.Label();
             this.TituloSolicitar = new System.Windows.Forms.Label();
             this.genero = new System.Windows.Forms.Label();
@@ -43,6 +44,11 @@ namespace proyectolibreriaOF1
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_limpiar = new System.Windows.Forms.Button();
             this.fondo = new System.Windows.Forms.Label();
+=======
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+>>>>>>> 0cbd67c4ead85239d15e32218976ed21cede021f
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,10 +200,25 @@ namespace proyectolibreriaOF1
             this.fondo.Size = new System.Drawing.Size(365, 413);
             this.fondo.TabIndex = 51;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(421, 182);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 6;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(638, 185);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 7;
+            // 
             // solicitarlibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(1424, 570);
             this.Controls.Add(this.btn_guardar);
@@ -208,6 +229,13 @@ namespace proyectolibreriaOF1
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.TituloSolicitar);
             this.Controls.Add(this.TituloLibreria2);
+=======
+            this.BackColor = System.Drawing.Color.Green;
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+>>>>>>> 0cbd67c4ead85239d15e32218976ed21cede021f
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.fondo);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -226,6 +254,7 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarComprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarLibrosToolStripMenuItem;
+<<<<<<< HEAD
         private System.Windows.Forms.Label TituloLibreria2;
         private System.Windows.Forms.Label TituloSolicitar;
         private System.Windows.Forms.Label genero;
@@ -235,5 +264,9 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Button btn_limpiar;
         private System.Windows.Forms.Label fondo;
+=======
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+>>>>>>> 0cbd67c4ead85239d15e32218976ed21cede021f
     }
 }

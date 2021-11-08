@@ -36,6 +36,7 @@ C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.csp
 C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.csproj.CoreCompileInputs.cache
 C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.exe
 C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.pdb
+<<<<<<< HEAD
 C:\Users\Diego\OneDrive\Escritorio\libreriagand\bin\Debug\proyectolibreriaOF1.exe.config
 C:\Users\Diego\OneDrive\Escritorio\libreriagand\bin\Debug\proyectolibreriaOF1.exe
 C:\Users\Diego\OneDrive\Escritorio\libreriagand\bin\Debug\proyectolibreriaOF1.pdb
@@ -50,3 +51,19 @@ C:\Users\Diego\OneDrive\Escritorio\libreriagand\obj\Debug\proyectolibreriaOF1.cs
 C:\Users\Diego\OneDrive\Escritorio\libreriagand\obj\Debug\proyectolibreriaOF1.csproj.CoreCompileInputs.cache
 C:\Users\Diego\OneDrive\Escritorio\libreriagand\obj\Debug\proyectolibreriaOF1.exe
 C:\Users\Diego\OneDrive\Escritorio\libreriagand\obj\Debug\proyectolibreriaOF1.pdb
+=======
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\bin\Debug\proyectolibreriaOF1.exe.config
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\bin\Debug\proyectolibreriaOF1.exe
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\bin\Debug\proyectolibreriaOF1.pdb
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyectolibreriaOF1.csproj.AssemblyReference.cache
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyectolibreriaOF1.consultarcliente.resources
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyectolibreriaOF1.editarlibros.resources
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyectolibreriaOF1.Form1.resources
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyectolibreriaOF1.resgistrar_inventario.resources
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyectolibreriaOF1.solicitarlibro.resources
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyectolibreriaOF1.Properties.Resources.resources
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyectolibreriaOF1.csproj.GenerateResource.cache
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyectolibreriaOF1.csproj.CoreCompileInputs.cache
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyectolibreriaOF1.exe
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyectolibreriaOF1.pdb
+>>>>>>> 0cbd67c4ead85239d15e32218976ed21cede021f
