@@ -35,8 +35,6 @@ namespace proyectolibreriaOF1
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TituloEditar = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.id_libro = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.TituloLibreria1 = new System.Windows.Forms.Label();
@@ -132,25 +130,6 @@ namespace proyectolibreriaOF1
             this.TituloEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.TituloEditar.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(157, 211);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
-            this.textBox1.TabIndex = 5;
-            // 
-            // id_libro
-            // 
-            this.id_libro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_libro.Location = new System.Drawing.Point(53, 211);
-            this.id_libro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.id_libro.Name = "id_libro";
-            this.id_libro.Size = new System.Drawing.Size(72, 20);
-            this.id_libro.TabIndex = 9;
-            this.id_libro.Text = "Id:";
-            this.id_libro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -166,7 +145,7 @@ namespace proyectolibreriaOF1
             this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_agregar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_agregar.Location = new System.Drawing.Point(56, 494);
+            this.btn_agregar.Location = new System.Drawing.Point(56, 481);
             this.btn_agregar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(237, 30);
@@ -190,7 +169,7 @@ namespace proyectolibreriaOF1
             // nombre
             // 
             this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre.Location = new System.Drawing.Point(53, 235);
+            this.nombre.Location = new System.Drawing.Point(53, 222);
             this.nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(72, 20);
@@ -200,7 +179,7 @@ namespace proyectolibreriaOF1
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(157, 235);
+            this.textBox5.Location = new System.Drawing.Point(157, 222);
             this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(136, 20);
@@ -209,7 +188,7 @@ namespace proyectolibreriaOF1
             // genero
             // 
             this.genero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genero.Location = new System.Drawing.Point(53, 283);
+            this.genero.Location = new System.Drawing.Point(53, 270);
             this.genero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.genero.Name = "genero";
             this.genero.Size = new System.Drawing.Size(72, 20);
@@ -219,7 +198,7 @@ namespace proyectolibreriaOF1
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(157, 283);
+            this.textBox2.Location = new System.Drawing.Point(157, 270);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(136, 20);
@@ -228,7 +207,7 @@ namespace proyectolibreriaOF1
             // autor
             // 
             this.autor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autor.Location = new System.Drawing.Point(53, 259);
+            this.autor.Location = new System.Drawing.Point(53, 246);
             this.autor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.autor.Name = "autor";
             this.autor.Size = new System.Drawing.Size(72, 20);
@@ -238,7 +217,7 @@ namespace proyectolibreriaOF1
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(157, 259);
+            this.textBox3.Location = new System.Drawing.Point(157, 246);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(136, 20);
@@ -247,7 +226,7 @@ namespace proyectolibreriaOF1
             // edicion
             // 
             this.edicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edicion.Location = new System.Drawing.Point(53, 331);
+            this.edicion.Location = new System.Drawing.Point(53, 318);
             this.edicion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.edicion.Name = "edicion";
             this.edicion.Size = new System.Drawing.Size(72, 20);
@@ -258,7 +237,7 @@ namespace proyectolibreriaOF1
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(157, 331);
+            this.textBox4.Location = new System.Drawing.Point(157, 318);
             this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(136, 20);
@@ -268,7 +247,7 @@ namespace proyectolibreriaOF1
             // editorial
             // 
             this.editorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editorial.Location = new System.Drawing.Point(53, 307);
+            this.editorial.Location = new System.Drawing.Point(53, 294);
             this.editorial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.editorial.Name = "editorial";
             this.editorial.Size = new System.Drawing.Size(72, 20);
@@ -278,7 +257,7 @@ namespace proyectolibreriaOF1
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(157, 307);
+            this.textBox6.Location = new System.Drawing.Point(157, 294);
             this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(136, 20);
@@ -287,7 +266,7 @@ namespace proyectolibreriaOF1
             // idioma
             // 
             this.idioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idioma.Location = new System.Drawing.Point(53, 379);
+            this.idioma.Location = new System.Drawing.Point(53, 366);
             this.idioma.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.idioma.Name = "idioma";
             this.idioma.Size = new System.Drawing.Size(72, 20);
@@ -297,7 +276,7 @@ namespace proyectolibreriaOF1
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(157, 379);
+            this.textBox7.Location = new System.Drawing.Point(157, 366);
             this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(136, 20);
@@ -306,7 +285,7 @@ namespace proyectolibreriaOF1
             // año
             // 
             this.año.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.año.Location = new System.Drawing.Point(53, 355);
+            this.año.Location = new System.Drawing.Point(53, 342);
             this.año.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.año.Name = "año";
             this.año.Size = new System.Drawing.Size(72, 20);
@@ -316,7 +295,7 @@ namespace proyectolibreriaOF1
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(157, 355);
+            this.textBox8.Location = new System.Drawing.Point(157, 342);
             this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(136, 20);
@@ -325,7 +304,7 @@ namespace proyectolibreriaOF1
             // precio
             // 
             this.precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precio.Location = new System.Drawing.Point(53, 427);
+            this.precio.Location = new System.Drawing.Point(53, 414);
             this.precio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.precio.Name = "precio";
             this.precio.Size = new System.Drawing.Size(72, 20);
@@ -335,7 +314,7 @@ namespace proyectolibreriaOF1
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(157, 427);
+            this.textBox9.Location = new System.Drawing.Point(157, 414);
             this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(136, 20);
@@ -344,7 +323,7 @@ namespace proyectolibreriaOF1
             // paginas
             // 
             this.paginas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paginas.Location = new System.Drawing.Point(53, 403);
+            this.paginas.Location = new System.Drawing.Point(53, 390);
             this.paginas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.paginas.Name = "paginas";
             this.paginas.Size = new System.Drawing.Size(72, 20);
@@ -354,7 +333,7 @@ namespace proyectolibreriaOF1
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(157, 403);
+            this.textBox10.Location = new System.Drawing.Point(157, 390);
             this.textBox10.Margin = new System.Windows.Forms.Padding(2);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(136, 20);
@@ -363,7 +342,7 @@ namespace proyectolibreriaOF1
             // sipnosis
             // 
             this.sipnosis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sipnosis.Location = new System.Drawing.Point(53, 451);
+            this.sipnosis.Location = new System.Drawing.Point(53, 438);
             this.sipnosis.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sipnosis.Name = "sipnosis";
             this.sipnosis.Size = new System.Drawing.Size(72, 20);
@@ -373,7 +352,7 @@ namespace proyectolibreriaOF1
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(157, 451);
+            this.textBox11.Location = new System.Drawing.Point(157, 438);
             this.textBox11.Margin = new System.Windows.Forms.Padding(2);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(136, 20);
@@ -385,7 +364,7 @@ namespace proyectolibreriaOF1
             this.btn_limpiar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_limpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_limpiar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_limpiar.Location = new System.Drawing.Point(56, 562);
+            this.btn_limpiar.Location = new System.Drawing.Point(56, 549);
             this.btn_limpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.Size = new System.Drawing.Size(237, 30);
@@ -440,7 +419,7 @@ namespace proyectolibreriaOF1
             this.btn_actualizar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_actualizar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_actualizar.Location = new System.Drawing.Point(56, 528);
+            this.btn_actualizar.Location = new System.Drawing.Point(56, 515);
             this.btn_actualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(237, 30);
@@ -483,8 +462,6 @@ namespace proyectolibreriaOF1
             this.Controls.Add(this.TituloLibreria1);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.id_libro);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.TituloEditar);
             this.Controls.Add(this.menuStrip1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -507,8 +484,6 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarComprasToolStripMenuItem;
         private System.Windows.Forms.Label TituloEditar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label id_libro;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.Label TituloLibreria1;

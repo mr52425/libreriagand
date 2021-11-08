@@ -31,6 +31,9 @@ namespace proyectolibreriaOF1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.libreriagandtablas = new proyectolibreriaOF1.libreriagandtablas();
             this.inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.inventarioTableAdapter = new proyectolibreriaOF1.libreriagandtablasTableAdapters.inventarioTableAdapter();
@@ -64,13 +67,7 @@ namespace proyectolibreriaOF1
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TituloLibreria5 = new System.Windows.Forms.Label();
             this.TituloCompras = new System.Windows.Forms.Label();
-            this.fondo = new System.Windows.Forms.Label();
             this.Intruccion2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.box_consultar = new System.Windows.Forms.TextBox();
-            this.box_limpiar = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_consultar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.libreriagandtablas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingNavigator)).BeginInit();
@@ -252,7 +249,7 @@ namespace proyectolibreriaOF1
             this.menuStrip1.Location = new System.Drawing.Point(0, 70);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1153, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(861, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -291,7 +288,17 @@ namespace proyectolibreriaOF1
             // ventasDataGridView
             // 
             this.ventasDataGridView.AutoGenerateColumns = false;
-            this.ventasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ventasDataGridView.BackgroundColor = System.Drawing.Color.BurlyWood;
+            this.ventasDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ventasDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.ventasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.ventasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
@@ -300,10 +307,26 @@ namespace proyectolibreriaOF1
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.ventasDataGridView.DataSource = this.ventasBindingSource;
-            this.ventasDataGridView.Location = new System.Drawing.Point(323, 232);
+            this.ventasDataGridView.EnableHeadersVisualStyles = false;
+            this.ventasDataGridView.GridColor = System.Drawing.Color.SaddleBrown;
+            this.ventasDataGridView.Location = new System.Drawing.Point(28, 232);
             this.ventasDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.ventasDataGridView.Name = "ventasDataGridView";
+            this.ventasDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ventasDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.ventasDataGridView.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.ventasDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.ventasDataGridView.RowTemplate.Height = 24;
             this.ventasDataGridView.Size = new System.Drawing.Size(804, 401);
             this.ventasDataGridView.TabIndex = 2;
@@ -365,7 +388,7 @@ namespace proyectolibreriaOF1
             this.TituloLibreria5.ForeColor = System.Drawing.SystemColors.Control;
             this.TituloLibreria5.Location = new System.Drawing.Point(0, 0);
             this.TituloLibreria5.Name = "TituloLibreria5";
-            this.TituloLibreria5.Size = new System.Drawing.Size(1153, 70);
+            this.TituloLibreria5.Size = new System.Drawing.Size(861, 70);
             this.TituloLibreria5.TabIndex = 17;
             this.TituloLibreria5.Text = "Sistema de Libreria";
             this.TituloLibreria5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -378,24 +401,16 @@ namespace proyectolibreriaOF1
             this.TituloCompras.Location = new System.Drawing.Point(0, 94);
             this.TituloCompras.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TituloCompras.Name = "TituloCompras";
-            this.TituloCompras.Size = new System.Drawing.Size(1153, 64);
+            this.TituloCompras.Size = new System.Drawing.Size(861, 64);
             this.TituloCompras.TabIndex = 18;
             this.TituloCompras.Text = "Consultar Compras";
             this.TituloCompras.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // fondo
-            // 
-            this.fondo.BackColor = System.Drawing.Color.BurlyWood;
-            this.fondo.Location = new System.Drawing.Point(0, 185);
-            this.fondo.Name = "fondo";
-            this.fondo.Size = new System.Drawing.Size(289, 476);
-            this.fondo.TabIndex = 19;
             // 
             // Intruccion2
             // 
             this.Intruccion2.BackColor = System.Drawing.Color.Peru;
             this.Intruccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Intruccion2.Location = new System.Drawing.Point(320, 193);
+            this.Intruccion2.Location = new System.Drawing.Point(25, 193);
             this.Intruccion2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Intruccion2.Name = "Intruccion2";
             this.Intruccion2.Size = new System.Drawing.Size(240, 37);
@@ -403,73 +418,13 @@ namespace proyectolibreriaOF1
             this.Intruccion2.Text = "Listado de las compras registradas:";
             this.Intruccion2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.BurlyWood;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 318);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 37);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Introduce los datos a consultar:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // box_consultar
-            // 
-            this.box_consultar.Location = new System.Drawing.Point(24, 370);
-            this.box_consultar.Name = "box_consultar";
-            this.box_consultar.Size = new System.Drawing.Size(237, 20);
-            this.box_consultar.TabIndex = 51;
-            // 
-            // box_limpiar
-            // 
-            this.box_limpiar.Location = new System.Drawing.Point(24, 456);
-            this.box_limpiar.Name = "box_limpiar";
-            this.box_limpiar.Size = new System.Drawing.Size(237, 20);
-            this.box_limpiar.TabIndex = 50;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SandyBrown;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(24, 490);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(237, 30);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "Limpiar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btn_consultar
-            // 
-            this.btn_consultar.BackColor = System.Drawing.Color.SandyBrown;
-            this.btn_consultar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_consultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_consultar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_consultar.Location = new System.Drawing.Point(24, 407);
-            this.btn_consultar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_consultar.Name = "btn_consultar";
-            this.btn_consultar.Size = new System.Drawing.Size(237, 30);
-            this.btn_consultar.TabIndex = 48;
-            this.btn_consultar.Text = "Consultar";
-            this.btn_consultar.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
-            this.ClientSize = new System.Drawing.Size(1153, 659);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.box_consultar);
-            this.Controls.Add(this.box_limpiar);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btn_consultar);
+            this.ClientSize = new System.Drawing.Size(861, 659);
             this.Controls.Add(this.Intruccion2);
-            this.Controls.Add(this.fondo);
             this.Controls.Add(this.TituloCompras);
             this.Controls.Add(this.TituloLibreria5);
             this.Controls.Add(this.inventarioBindingNavigator);
@@ -490,7 +445,6 @@ namespace proyectolibreriaOF1
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ventasDataGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -529,13 +483,7 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Label TituloLibreria5;
         private System.Windows.Forms.Label TituloCompras;
-        private System.Windows.Forms.Label fondo;
         private System.Windows.Forms.Label Intruccion2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox box_consultar;
-        private System.Windows.Forms.TextBox box_limpiar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btn_consultar;
     }
 }
 

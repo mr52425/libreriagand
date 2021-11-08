@@ -68,7 +68,6 @@ namespace proyectolibreriaOF1
             this.TituloLibreria4 = new System.Windows.Forms.Label();
             this.TituloClientes = new System.Windows.Forms.Label();
             this.Intruccion2 = new System.Windows.Forms.Label();
-            this.fondo = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.libreriagandtablas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
@@ -91,7 +90,7 @@ namespace proyectolibreriaOF1
             this.menuStrip2.Location = new System.Drawing.Point(0, 70);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(1426, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(1091, 24);
             this.menuStrip2.TabIndex = 6;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -176,7 +175,7 @@ namespace proyectolibreriaOF1
             this.clienteBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.clienteBindingNavigator.Name = "clienteBindingNavigator";
             this.clienteBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.clienteBindingNavigator.Size = new System.Drawing.Size(1426, 27);
+            this.clienteBindingNavigator.Size = new System.Drawing.Size(1091, 27);
             this.clienteBindingNavigator.TabIndex = 9;
             this.clienteBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -301,7 +300,7 @@ namespace proyectolibreriaOF1
             this.clienteDataGridView.DataSource = this.clienteBindingSource;
             this.clienteDataGridView.EnableHeadersVisualStyles = false;
             this.clienteDataGridView.GridColor = System.Drawing.Color.SaddleBrown;
-            this.clienteDataGridView.Location = new System.Drawing.Point(350, 236);
+            this.clienteDataGridView.Location = new System.Drawing.Point(26, 236);
             this.clienteDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.clienteDataGridView.Name = "clienteDataGridView";
             this.clienteDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -395,7 +394,7 @@ namespace proyectolibreriaOF1
             this.TituloLibreria4.ForeColor = System.Drawing.SystemColors.Control;
             this.TituloLibreria4.Location = new System.Drawing.Point(0, 0);
             this.TituloLibreria4.Name = "TituloLibreria4";
-            this.TituloLibreria4.Size = new System.Drawing.Size(1426, 70);
+            this.TituloLibreria4.Size = new System.Drawing.Size(1091, 70);
             this.TituloLibreria4.TabIndex = 16;
             this.TituloLibreria4.Text = "Sistema de Libreria";
             this.TituloLibreria4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -408,7 +407,7 @@ namespace proyectolibreriaOF1
             this.TituloClientes.Location = new System.Drawing.Point(0, 94);
             this.TituloClientes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TituloClientes.Name = "TituloClientes";
-            this.TituloClientes.Size = new System.Drawing.Size(1426, 64);
+            this.TituloClientes.Size = new System.Drawing.Size(1091, 64);
             this.TituloClientes.TabIndex = 17;
             this.TituloClientes.Text = "Consultar Clientes";
             this.TituloClientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -417,7 +416,7 @@ namespace proyectolibreriaOF1
             // 
             this.Intruccion2.BackColor = System.Drawing.Color.Peru;
             this.Intruccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Intruccion2.Location = new System.Drawing.Point(347, 197);
+            this.Intruccion2.Location = new System.Drawing.Point(23, 197);
             this.Intruccion2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Intruccion2.Name = "Intruccion2";
             this.Intruccion2.Size = new System.Drawing.Size(240, 37);
@@ -425,27 +424,18 @@ namespace proyectolibreriaOF1
             this.Intruccion2.Text = "Listado de los clientes registrados:";
             this.Intruccion2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // fondo
-            // 
-            this.fondo.BackColor = System.Drawing.Color.BurlyWood;
-            this.fondo.Location = new System.Drawing.Point(0, 185);
-            this.fondo.Name = "fondo";
-            this.fondo.Size = new System.Drawing.Size(308, 521);
-            this.fondo.TabIndex = 43;
-            // 
             // consultarcliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
-            this.ClientSize = new System.Drawing.Size(1426, 675);
+            this.ClientSize = new System.Drawing.Size(1091, 675);
             this.Controls.Add(this.Intruccion2);
             this.Controls.Add(this.TituloClientes);
             this.Controls.Add(this.TituloLibreria4);
             this.Controls.Add(this.clienteDataGridView);
             this.Controls.Add(this.clienteBindingNavigator);
             this.Controls.Add(this.menuStrip2);
-            this.Controls.Add(this.fondo);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "consultarcliente";
             this.Text = "Sistema de Libreria - Consultar Clientes";
@@ -498,6 +488,5 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.Label TituloLibreria4;
         private System.Windows.Forms.Label TituloClientes;
         private System.Windows.Forms.Label Intruccion2;
-        private System.Windows.Forms.Label fondo;
     }
 }
