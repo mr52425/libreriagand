@@ -55,5 +55,10 @@ namespace proyectolibreriaOF1
             editarlibros f2 = new editarlibros();
             f2.Show();
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

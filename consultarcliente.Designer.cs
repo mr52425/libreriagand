@@ -31,12 +31,14 @@ namespace proyectolibreriaOF1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consultarcliente));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.consultarComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.solicitarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label2 = new System.Windows.Forms.Label();
+            this.consultarComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.libreriagandtablas = new proyectolibreriaOF1.libreriagandtablas();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteTableAdapter = new proyectolibreriaOF1.libreriagandtablasTableAdapters.clienteTableAdapter();
@@ -63,6 +65,10 @@ namespace proyectolibreriaOF1
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TituloLibreria4 = new System.Windows.Forms.Label();
+            this.TituloClientes = new System.Windows.Forms.Label();
+            this.Intruccion2 = new System.Windows.Forms.Label();
+            this.fondo = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.libreriagandtablas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
@@ -73,57 +79,49 @@ namespace proyectolibreriaOF1
             // 
             // menuStrip2
             // 
-            this.menuStrip2.BackColor = System.Drawing.Color.LightGreen;
+            this.menuStrip2.AutoSize = false;
+            this.menuStrip2.BackColor = System.Drawing.Color.SandyBrown;
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarComprasToolStripMenuItem,
             this.editarLibrosToolStripMenuItem,
             this.solicitarLibrosToolStripMenuItem,
-            this.registrarInventarioToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.registrarInventarioToolStripMenuItem,
+            this.consultarComprasToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 70);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1902, 28);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip2.Size = new System.Drawing.Size(1426, 24);
             this.menuStrip2.TabIndex = 6;
             this.menuStrip2.Text = "menuStrip2";
-            // 
-            // consultarComprasToolStripMenuItem
-            // 
-            this.consultarComprasToolStripMenuItem.Name = "consultarComprasToolStripMenuItem";
-            this.consultarComprasToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
-            this.consultarComprasToolStripMenuItem.Text = "consultar compras";
-            this.consultarComprasToolStripMenuItem.Click += new System.EventHandler(this.consultarComprasToolStripMenuItem_Click);
             // 
             // editarLibrosToolStripMenuItem
             // 
             this.editarLibrosToolStripMenuItem.Name = "editarLibrosToolStripMenuItem";
-            this.editarLibrosToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
-            this.editarLibrosToolStripMenuItem.Text = "editar libros";
+            this.editarLibrosToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.editarLibrosToolStripMenuItem.Text = "Editar Libros";
             this.editarLibrosToolStripMenuItem.Click += new System.EventHandler(this.editarLibrosToolStripMenuItem_Click);
             // 
             // solicitarLibrosToolStripMenuItem
             // 
             this.solicitarLibrosToolStripMenuItem.Name = "solicitarLibrosToolStripMenuItem";
-            this.solicitarLibrosToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
-            this.solicitarLibrosToolStripMenuItem.Text = "solicitar libros";
+            this.solicitarLibrosToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.solicitarLibrosToolStripMenuItem.Text = "Solicitar Libros";
             this.solicitarLibrosToolStripMenuItem.Click += new System.EventHandler(this.solicitarLibrosToolStripMenuItem_Click);
             // 
             // registrarInventarioToolStripMenuItem
             // 
             this.registrarInventarioToolStripMenuItem.Name = "registrarInventarioToolStripMenuItem";
-            this.registrarInventarioToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
-            this.registrarInventarioToolStripMenuItem.Text = "registrar inventario";
+            this.registrarInventarioToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.registrarInventarioToolStripMenuItem.Text = "Registrar Inventario";
             this.registrarInventarioToolStripMenuItem.Click += new System.EventHandler(this.registrarInventarioToolStripMenuItem_Click);
             // 
-            // label2
+            // consultarComprasToolStripMenuItem
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(497, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(295, 38);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Consultar clientes";
+            this.consultarComprasToolStripMenuItem.Name = "consultarComprasToolStripMenuItem";
+            this.consultarComprasToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.consultarComprasToolStripMenuItem.Text = "Consultar Compras";
+            this.consultarComprasToolStripMenuItem.Click += new System.EventHandler(this.consultarComprasToolStripMenuItem_Click);
             // 
             // libreriagandtablas
             // 
@@ -151,9 +149,12 @@ namespace proyectolibreriaOF1
             // clienteBindingNavigator
             // 
             this.clienteBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.clienteBindingNavigator.AutoSize = false;
+            this.clienteBindingNavigator.BackColor = System.Drawing.Color.SandyBrown;
             this.clienteBindingNavigator.BindingSource = this.clienteBindingSource;
             this.clienteBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.clienteBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.clienteBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
             this.clienteBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.clienteBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
@@ -168,14 +169,14 @@ namespace proyectolibreriaOF1
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.clienteBindingNavigatorSaveItem});
-            this.clienteBindingNavigator.Location = new System.Drawing.Point(0, 28);
+            this.clienteBindingNavigator.Location = new System.Drawing.Point(0, 158);
             this.clienteBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.clienteBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.clienteBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.clienteBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.clienteBindingNavigator.Name = "clienteBindingNavigator";
             this.clienteBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.clienteBindingNavigator.Size = new System.Drawing.Size(1902, 27);
+            this.clienteBindingNavigator.Size = new System.Drawing.Size(1426, 27);
             this.clienteBindingNavigator.TabIndex = 9;
             this.clienteBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -185,13 +186,13 @@ namespace proyectolibreriaOF1
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
@@ -201,7 +202,7 @@ namespace proyectolibreriaOF1
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
@@ -210,7 +211,7 @@ namespace proyectolibreriaOF1
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
             // 
             // bindingNavigatorMovePreviousItem
@@ -219,7 +220,7 @@ namespace proyectolibreriaOF1
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
@@ -233,7 +234,7 @@ namespace proyectolibreriaOF1
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
@@ -248,7 +249,7 @@ namespace proyectolibreriaOF1
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
             // 
             // bindingNavigatorMoveLastItem
@@ -257,7 +258,7 @@ namespace proyectolibreriaOF1
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
@@ -270,14 +271,24 @@ namespace proyectolibreriaOF1
             this.clienteBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.clienteBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("clienteBindingNavigatorSaveItem.Image")));
             this.clienteBindingNavigatorSaveItem.Name = "clienteBindingNavigatorSaveItem";
-            this.clienteBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.clienteBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.clienteBindingNavigatorSaveItem.Text = "Guardar datos";
             this.clienteBindingNavigatorSaveItem.Click += new System.EventHandler(this.clienteBindingNavigatorSaveItem_Click);
             // 
             // clienteDataGridView
             // 
             this.clienteDataGridView.AutoGenerateColumns = false;
-            this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clienteDataGridView.BackgroundColor = System.Drawing.Color.BurlyWood;
+            this.clienteDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.clienteDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.clienteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
@@ -288,11 +299,28 @@ namespace proyectolibreriaOF1
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.clienteDataGridView.DataSource = this.clienteBindingSource;
-            this.clienteDataGridView.Location = new System.Drawing.Point(28, 123);
+            this.clienteDataGridView.EnableHeadersVisualStyles = false;
+            this.clienteDataGridView.GridColor = System.Drawing.Color.SaddleBrown;
+            this.clienteDataGridView.Location = new System.Drawing.Point(350, 236);
+            this.clienteDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.clienteDataGridView.Name = "clienteDataGridView";
+            this.clienteDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.clienteDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.clienteDataGridView.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.clienteDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.clienteDataGridView.RowTemplate.Height = 24;
-            this.clienteDataGridView.Size = new System.Drawing.Size(1386, 520);
+            this.clienteDataGridView.Size = new System.Drawing.Size(1040, 422);
             this.clienteDataGridView.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn1
@@ -359,18 +387,68 @@ namespace proyectolibreriaOF1
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Width = 125;
             // 
+            // TituloLibreria4
+            // 
+            this.TituloLibreria4.BackColor = System.Drawing.Color.Maroon;
+            this.TituloLibreria4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TituloLibreria4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TituloLibreria4.ForeColor = System.Drawing.SystemColors.Control;
+            this.TituloLibreria4.Location = new System.Drawing.Point(0, 0);
+            this.TituloLibreria4.Name = "TituloLibreria4";
+            this.TituloLibreria4.Size = new System.Drawing.Size(1426, 70);
+            this.TituloLibreria4.TabIndex = 16;
+            this.TituloLibreria4.Text = "Sistema de Libreria";
+            this.TituloLibreria4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TituloClientes
+            // 
+            this.TituloClientes.BackColor = System.Drawing.Color.Sienna;
+            this.TituloClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TituloClientes.ForeColor = System.Drawing.SystemColors.Control;
+            this.TituloClientes.Location = new System.Drawing.Point(0, 94);
+            this.TituloClientes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TituloClientes.Name = "TituloClientes";
+            this.TituloClientes.Size = new System.Drawing.Size(1426, 64);
+            this.TituloClientes.TabIndex = 17;
+            this.TituloClientes.Text = "Consultar Clientes";
+            this.TituloClientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Intruccion2
+            // 
+            this.Intruccion2.BackColor = System.Drawing.Color.Peru;
+            this.Intruccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Intruccion2.Location = new System.Drawing.Point(347, 197);
+            this.Intruccion2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Intruccion2.Name = "Intruccion2";
+            this.Intruccion2.Size = new System.Drawing.Size(240, 37);
+            this.Intruccion2.TabIndex = 41;
+            this.Intruccion2.Text = "Listado de los clientes registrados:";
+            this.Intruccion2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // fondo
+            // 
+            this.fondo.BackColor = System.Drawing.Color.BurlyWood;
+            this.fondo.Location = new System.Drawing.Point(0, 185);
+            this.fondo.Name = "fondo";
+            this.fondo.Size = new System.Drawing.Size(308, 521);
+            this.fondo.TabIndex = 43;
+            // 
             // consultarcliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Green;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.BackColor = System.Drawing.Color.Peru;
+            this.ClientSize = new System.Drawing.Size(1426, 675);
+            this.Controls.Add(this.Intruccion2);
+            this.Controls.Add(this.TituloClientes);
+            this.Controls.Add(this.TituloLibreria4);
             this.Controls.Add(this.clienteDataGridView);
             this.Controls.Add(this.clienteBindingNavigator);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip2);
+            this.Controls.Add(this.fondo);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "consultarcliente";
-            this.Text = "consultarcliente";
+            this.Text = "Sistema de Libreria - Consultar Clientes";
             this.Load += new System.EventHandler(this.consultarcliente_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
@@ -381,7 +459,6 @@ namespace proyectolibreriaOF1
             this.clienteBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -391,7 +468,6 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.ToolStripMenuItem consultarComprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarLibrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem solicitarLibrosToolStripMenuItem;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem registrarInventarioToolStripMenuItem;
         private libreriagandtablas libreriagandtablas;
         private System.Windows.Forms.BindingSource clienteBindingSource;
@@ -419,5 +495,9 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.Label TituloLibreria4;
+        private System.Windows.Forms.Label TituloClientes;
+        private System.Windows.Forms.Label Intruccion2;
+        private System.Windows.Forms.Label fondo;
     }
 }
