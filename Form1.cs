@@ -66,6 +66,7 @@ namespace proyectolibreriaOF1
             this.Hide();
             resgistrar_inventario f2 = new resgistrar_inventario();
             f2.Show();
+           
         }
 
         private void inventarioBindingNavigator_RefreshItems(object sender, EventArgs e)
