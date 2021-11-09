@@ -75,7 +75,7 @@ namespace proyectolibreriaOF1
 
         private void ventasDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
        
