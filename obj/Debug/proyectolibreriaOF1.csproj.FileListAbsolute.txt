@@ -67,3 +67,8 @@ C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyect
 C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyectolibreriaOF1.exe
 C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyectolibreriaOF1.pdb
 >>>>>>> 0cbd67c4ead85239d15e32218976ed21cede021f
+C:\Users\52562\OneDrive\Imágenes\libreriagand\bin\Debug\EntityFramework.dll
+C:\Users\52562\OneDrive\Imágenes\libreriagand\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\52562\OneDrive\Imágenes\libreriagand\bin\Debug\EntityFramework.xml
+C:\Users\52562\OneDrive\Imágenes\libreriagand\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\52562\OneDrive\Imágenes\libreriagand\obj\Debug\proyectolibreriaOF1.csproj.CopyComplete

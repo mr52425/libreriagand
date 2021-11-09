@@ -69,5 +69,10 @@ namespace proyectolibreriaOF1
         {
 
         }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

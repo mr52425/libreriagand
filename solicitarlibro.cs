@@ -50,5 +50,15 @@ namespace proyectolibreriaOF1
         {
 
         }
+
+        private void solicitarlibro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fondo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
