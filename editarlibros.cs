@@ -79,6 +79,7 @@ namespace proyectolibreriaOF1
         {
             try
             {
+                modelo.id_libro = int.Parse(txtlibro.Text.Trim());
                 modelo.nom_libro = txtnombre.Text.Trim();
                 modelo.autor = txtautor.Text.Trim();
                 modelo.genero = txtgenero.Text.Trim();
@@ -89,6 +90,10 @@ namespace proyectolibreriaOF1
                 modelo.paginas = int.Parse(txtpaginas.Text.Trim());
                 modelo.precio = decimal.Parse(txtprecio.Text.Trim());
                 modelo.sipnosis = txtsipnosis.Text.Trim();
+                if (txtlibro.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el id del libro!");
+                }
                 if (txtnombre.Text == "")
                 {
                     MessageBox.Show("¡Por favor digite el nombre del libro!");
