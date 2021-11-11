@@ -396,7 +396,7 @@ namespace proyectolibreriaOF1
             this.TituloLibreria4.Name = "TituloLibreria4";
             this.TituloLibreria4.Size = new System.Drawing.Size(1091, 70);
             this.TituloLibreria4.TabIndex = 16;
-            this.TituloLibreria4.Text = "Sistema de Libreria";
+            this.TituloLibreria4.Text = "Sistema de Librería";
             this.TituloLibreria4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TituloClientes
