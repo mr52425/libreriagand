@@ -19,6 +19,8 @@ namespace proyectolibreriaOF1
 
         private void editarlibros_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'libreriagandtablas.libro' Puede moverla o quitarla según sea necesario.
+            this.libroTableAdapter.Fill(this.libreriagandtablas.libro);
 
         }
 

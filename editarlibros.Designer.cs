@@ -29,6 +29,7 @@ namespace proyectolibreriaOF1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.solicitarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,36 +37,53 @@ namespace proyectolibreriaOF1
             this.consultarComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TituloEditar = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btn_agregar = new System.Windows.Forms.Button();
             this.TituloLibreria1 = new System.Windows.Forms.Label();
             this.nombre = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
             this.genero = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtgenero = new System.Windows.Forms.TextBox();
             this.autor = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtautor = new System.Windows.Forms.TextBox();
             this.edicion = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtedicion = new System.Windows.Forms.TextBox();
             this.editorial = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txteditorial = new System.Windows.Forms.TextBox();
             this.idioma = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtidioma = new System.Windows.Forms.TextBox();
             this.año = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtaño = new System.Windows.Forms.TextBox();
             this.precio = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtprecio = new System.Windows.Forms.TextBox();
             this.paginas = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtpaginas = new System.Windows.Forms.TextBox();
             this.sipnosis = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.btn_limpiar = new System.Windows.Forms.Button();
+            this.txtsipnosis = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Intruccion1 = new System.Windows.Forms.Label();
             this.Intruccion2 = new System.Windows.Forms.Label();
-            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_guardar = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.libreriagandtablas = new proyectolibreriaOF1.libreriagandtablas();
+            this.libroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.libroTableAdapter = new proyectolibreriaOF1.libreriagandtablasTableAdapters.libroTableAdapter();
+            this.tableAdapterManager = new proyectolibreriaOF1.libreriagandtablasTableAdapters.TableAdapterManager();
+            this.idlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edicionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.añoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idiomaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paginasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sipnosisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libreriagandtablas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -79,31 +97,31 @@ namespace proyectolibreriaOF1
             this.registrarToolStripMenuItem,
             this.consultarToolStripMenuItem,
             this.consultarComprasToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 86);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 70);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1201, 37);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1459, 30);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // solicitarLibrosToolStripMenuItem
             // 
             this.solicitarLibrosToolStripMenuItem.Name = "solicitarLibrosToolStripMenuItem";
-            this.solicitarLibrosToolStripMenuItem.Size = new System.Drawing.Size(117, 33);
+            this.solicitarLibrosToolStripMenuItem.Size = new System.Drawing.Size(93, 26);
             this.solicitarLibrosToolStripMenuItem.Text = "Solictar Libros";
             this.solicitarLibrosToolStripMenuItem.Click += new System.EventHandler(this.solicitarLibrosToolStripMenuItem_Click);
             // 
             // registrarToolStripMenuItem
             // 
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(152, 33);
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(121, 26);
             this.registrarToolStripMenuItem.Text = "Registrar Inventario";
             this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(141, 33);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(115, 26);
             this.consultarToolStripMenuItem.Text = "Consultar Clientes";
             this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
@@ -112,7 +130,7 @@ namespace proyectolibreriaOF1
             this.consultarComprasToolStripMenuItem.BackColor = System.Drawing.Color.SandyBrown;
             this.consultarComprasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.consultarComprasToolStripMenuItem.Name = "consultarComprasToolStripMenuItem";
-            this.consultarComprasToolStripMenuItem.Size = new System.Drawing.Size(148, 33);
+            this.consultarComprasToolStripMenuItem.Size = new System.Drawing.Size(121, 26);
             this.consultarComprasToolStripMenuItem.Text = "Consultar Compras";
             this.consultarComprasToolStripMenuItem.Click += new System.EventHandler(this.consultarComprasToolStripMenuItem_Click);
             // 
@@ -121,9 +139,10 @@ namespace proyectolibreriaOF1
             this.TituloEditar.BackColor = System.Drawing.Color.Sienna;
             this.TituloEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TituloEditar.ForeColor = System.Drawing.SystemColors.Control;
-            this.TituloEditar.Location = new System.Drawing.Point(0, 123);
+            this.TituloEditar.Location = new System.Drawing.Point(0, 100);
+            this.TituloEditar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TituloEditar.Name = "TituloEditar";
-            this.TituloEditar.Size = new System.Drawing.Size(1201, 79);
+            this.TituloEditar.Size = new System.Drawing.Size(1459, 64);
             this.TituloEditar.TabIndex = 4;
             this.TituloEditar.Text = "Editar Libros";
             this.TituloEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -132,25 +151,11 @@ namespace proyectolibreriaOF1
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(612, 378);
+            this.label6.Location = new System.Drawing.Point(459, 307);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 17);
+            this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 13;
-            // 
-            // btn_agregar
-            // 
-            this.btn_agregar.BackColor = System.Drawing.Color.SandyBrown;
-            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_agregar.Location = new System.Drawing.Point(75, 592);
-            this.btn_agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(316, 37);
-            this.btn_agregar.TabIndex = 14;
-            this.btn_agregar.Text = "Agregar";
-            this.btn_agregar.UseVisualStyleBackColor = false;
-            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // TituloLibreria1
             // 
@@ -159,9 +164,8 @@ namespace proyectolibreriaOF1
             this.TituloLibreria1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TituloLibreria1.ForeColor = System.Drawing.SystemColors.Control;
             this.TituloLibreria1.Location = new System.Drawing.Point(0, 0);
-            this.TituloLibreria1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TituloLibreria1.Name = "TituloLibreria1";
-            this.TituloLibreria1.Size = new System.Drawing.Size(1201, 86);
+            this.TituloLibreria1.Size = new System.Drawing.Size(1459, 70);
             this.TituloLibreria1.TabIndex = 15;
             this.TituloLibreria1.Text = "Sistema de Libreria";
             this.TituloLibreria1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -169,225 +173,234 @@ namespace proyectolibreriaOF1
             // nombre
             // 
             this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre.Location = new System.Drawing.Point(71, 273);
+            this.nombre.Location = new System.Drawing.Point(17, 222);
+            this.nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(96, 25);
+            this.nombre.Size = new System.Drawing.Size(72, 20);
             this.nombre.TabIndex = 17;
             this.nombre.Text = "Nombre: ";
             this.nombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox5
+            // txtnombre
             // 
-            this.textBox5.Location = new System.Drawing.Point(209, 273);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(180, 22);
-            this.textBox5.TabIndex = 16;
+            this.txtnombre.Location = new System.Drawing.Point(121, 222);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(136, 20);
+            this.txtnombre.TabIndex = 16;
             // 
             // genero
             // 
             this.genero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genero.Location = new System.Drawing.Point(71, 332);
+            this.genero.Location = new System.Drawing.Point(17, 270);
+            this.genero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.genero.Name = "genero";
-            this.genero.Size = new System.Drawing.Size(96, 25);
+            this.genero.Size = new System.Drawing.Size(72, 20);
             this.genero.TabIndex = 21;
             this.genero.Text = "Genero:";
             this.genero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox2
+            // txtgenero
             // 
-            this.textBox2.Location = new System.Drawing.Point(209, 332);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 22);
-            this.textBox2.TabIndex = 20;
+            this.txtgenero.Location = new System.Drawing.Point(121, 270);
+            this.txtgenero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtgenero.Name = "txtgenero";
+            this.txtgenero.Size = new System.Drawing.Size(136, 20);
+            this.txtgenero.TabIndex = 20;
             // 
             // autor
             // 
             this.autor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autor.Location = new System.Drawing.Point(71, 303);
+            this.autor.Location = new System.Drawing.Point(17, 246);
+            this.autor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.autor.Name = "autor";
-            this.autor.Size = new System.Drawing.Size(96, 25);
+            this.autor.Size = new System.Drawing.Size(72, 20);
             this.autor.TabIndex = 19;
             this.autor.Text = "Autor:";
             this.autor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox3
+            // txtautor
             // 
-            this.textBox3.Location = new System.Drawing.Point(209, 303);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(180, 22);
-            this.textBox3.TabIndex = 18;
+            this.txtautor.Location = new System.Drawing.Point(121, 246);
+            this.txtautor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtautor.Name = "txtautor";
+            this.txtautor.Size = new System.Drawing.Size(136, 20);
+            this.txtautor.TabIndex = 18;
             // 
             // edicion
             // 
             this.edicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edicion.Location = new System.Drawing.Point(71, 391);
+            this.edicion.Location = new System.Drawing.Point(17, 318);
+            this.edicion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.edicion.Name = "edicion";
-            this.edicion.Size = new System.Drawing.Size(96, 25);
+            this.edicion.Size = new System.Drawing.Size(72, 20);
             this.edicion.TabIndex = 25;
             this.edicion.Text = "Edición: ";
             this.edicion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.edicion.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox4
+            // txtedicion
             // 
-            this.textBox4.Location = new System.Drawing.Point(209, 391);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(180, 22);
-            this.textBox4.TabIndex = 24;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtedicion.Location = new System.Drawing.Point(121, 318);
+            this.txtedicion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtedicion.Name = "txtedicion";
+            this.txtedicion.Size = new System.Drawing.Size(136, 20);
+            this.txtedicion.TabIndex = 24;
+            this.txtedicion.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // editorial
             // 
             this.editorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editorial.Location = new System.Drawing.Point(71, 362);
+            this.editorial.Location = new System.Drawing.Point(17, 294);
+            this.editorial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.editorial.Name = "editorial";
-            this.editorial.Size = new System.Drawing.Size(96, 25);
+            this.editorial.Size = new System.Drawing.Size(72, 20);
             this.editorial.TabIndex = 23;
             this.editorial.Text = "Editorial:";
             this.editorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox6
+            // txteditorial
             // 
-            this.textBox6.Location = new System.Drawing.Point(209, 362);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(180, 22);
-            this.textBox6.TabIndex = 22;
+            this.txteditorial.Location = new System.Drawing.Point(121, 294);
+            this.txteditorial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txteditorial.Name = "txteditorial";
+            this.txteditorial.Size = new System.Drawing.Size(136, 20);
+            this.txteditorial.TabIndex = 22;
             // 
             // idioma
             // 
             this.idioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idioma.Location = new System.Drawing.Point(71, 450);
+            this.idioma.Location = new System.Drawing.Point(17, 366);
+            this.idioma.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.idioma.Name = "idioma";
-            this.idioma.Size = new System.Drawing.Size(96, 25);
+            this.idioma.Size = new System.Drawing.Size(72, 20);
             this.idioma.TabIndex = 29;
             this.idioma.Text = "Idioma:";
             this.idioma.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox7
+            // txtidioma
             // 
-            this.textBox7.Location = new System.Drawing.Point(209, 450);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(180, 22);
-            this.textBox7.TabIndex = 28;
+            this.txtidioma.Location = new System.Drawing.Point(121, 366);
+            this.txtidioma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtidioma.Name = "txtidioma";
+            this.txtidioma.Size = new System.Drawing.Size(136, 20);
+            this.txtidioma.TabIndex = 28;
             // 
             // año
             // 
             this.año.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.año.Location = new System.Drawing.Point(71, 421);
+            this.año.Location = new System.Drawing.Point(17, 342);
+            this.año.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.año.Name = "año";
-            this.año.Size = new System.Drawing.Size(96, 25);
+            this.año.Size = new System.Drawing.Size(72, 20);
             this.año.TabIndex = 27;
             this.año.Text = "Año:";
             this.año.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox8
+            // txtaño
             // 
-            this.textBox8.Location = new System.Drawing.Point(209, 421);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(180, 22);
-            this.textBox8.TabIndex = 26;
+            this.txtaño.Location = new System.Drawing.Point(121, 342);
+            this.txtaño.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtaño.Name = "txtaño";
+            this.txtaño.Size = new System.Drawing.Size(136, 20);
+            this.txtaño.TabIndex = 26;
             // 
             // precio
             // 
             this.precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precio.Location = new System.Drawing.Point(71, 510);
+            this.precio.Location = new System.Drawing.Point(17, 414);
+            this.precio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.precio.Name = "precio";
-            this.precio.Size = new System.Drawing.Size(96, 25);
+            this.precio.Size = new System.Drawing.Size(72, 20);
             this.precio.TabIndex = 33;
             this.precio.Text = "Precio:";
             this.precio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox9
+            // txtprecio
             // 
-            this.textBox9.Location = new System.Drawing.Point(209, 510);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(180, 22);
-            this.textBox9.TabIndex = 32;
+            this.txtprecio.Location = new System.Drawing.Point(121, 414);
+            this.txtprecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtprecio.Name = "txtprecio";
+            this.txtprecio.Size = new System.Drawing.Size(136, 20);
+            this.txtprecio.TabIndex = 32;
             // 
             // paginas
             // 
             this.paginas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paginas.Location = new System.Drawing.Point(71, 480);
+            this.paginas.Location = new System.Drawing.Point(17, 390);
+            this.paginas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.paginas.Name = "paginas";
-            this.paginas.Size = new System.Drawing.Size(96, 25);
+            this.paginas.Size = new System.Drawing.Size(72, 20);
             this.paginas.TabIndex = 31;
             this.paginas.Text = "Páginas:";
             this.paginas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox10
+            // txtpaginas
             // 
-            this.textBox10.Location = new System.Drawing.Point(209, 480);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(180, 22);
-            this.textBox10.TabIndex = 30;
+            this.txtpaginas.Location = new System.Drawing.Point(121, 390);
+            this.txtpaginas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtpaginas.Name = "txtpaginas";
+            this.txtpaginas.Size = new System.Drawing.Size(136, 20);
+            this.txtpaginas.TabIndex = 30;
             // 
             // sipnosis
             // 
             this.sipnosis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sipnosis.Location = new System.Drawing.Point(71, 539);
+            this.sipnosis.Location = new System.Drawing.Point(17, 438);
+            this.sipnosis.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sipnosis.Name = "sipnosis";
-            this.sipnosis.Size = new System.Drawing.Size(96, 25);
+            this.sipnosis.Size = new System.Drawing.Size(72, 20);
             this.sipnosis.TabIndex = 35;
             this.sipnosis.Text = "Sipnosis:";
             this.sipnosis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox11
+            // txtsipnosis
             // 
-            this.textBox11.Location = new System.Drawing.Point(209, 539);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(180, 22);
-            this.textBox11.TabIndex = 34;
-            // 
-            // btn_limpiar
-            // 
-            this.btn_limpiar.BackColor = System.Drawing.Color.SandyBrown;
-            this.btn_limpiar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_limpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_limpiar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_limpiar.Location = new System.Drawing.Point(75, 676);
-            this.btn_limpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_limpiar.Name = "btn_limpiar";
-            this.btn_limpiar.Size = new System.Drawing.Size(316, 37);
-            this.btn_limpiar.TabIndex = 36;
-            this.btn_limpiar.Text = "Limpiar";
-            this.btn_limpiar.UseVisualStyleBackColor = false;
+            this.txtsipnosis.Location = new System.Drawing.Point(121, 438);
+            this.txtsipnosis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtsipnosis.Name = "txtsipnosis";
+            this.txtsipnosis.Size = new System.Drawing.Size(136, 20);
+            this.txtsipnosis.TabIndex = 34;
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Peru;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(495, 202);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(275, 164);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(707, 540);
+            this.label3.Size = new System.Drawing.Size(1184, 439);
             this.label3.TabIndex = 37;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(556, 260);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idlibroDataGridViewTextBoxColumn,
+            this.nomlibroDataGridViewTextBoxColumn,
+            this.autorDataGridViewTextBoxColumn,
+            this.generoDataGridViewTextBoxColumn,
+            this.editorialDataGridViewTextBoxColumn,
+            this.edicionDataGridViewTextBoxColumn,
+            this.añoDataGridViewTextBoxColumn,
+            this.idiomaDataGridViewTextBoxColumn,
+            this.paginasDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn,
+            this.sipnosisDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.libroBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(294, 211);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(596, 454);
+            this.dataGridView1.Size = new System.Drawing.Size(1153, 369);
             this.dataGridView1.TabIndex = 38;
             // 
             // Intruccion1
             // 
             this.Intruccion1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Intruccion1.Location = new System.Drawing.Point(71, 212);
+            this.Intruccion1.Location = new System.Drawing.Point(17, 172);
+            this.Intruccion1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Intruccion1.Name = "Intruccion1";
-            this.Intruccion1.Size = new System.Drawing.Size(320, 46);
+            this.Intruccion1.Size = new System.Drawing.Size(240, 37);
             this.Intruccion1.TabIndex = 39;
             this.Intruccion1.Text = "Introduce los datos del libro a editar:";
             this.Intruccion1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -396,72 +409,192 @@ namespace proyectolibreriaOF1
             // 
             this.Intruccion2.BackColor = System.Drawing.Color.Peru;
             this.Intruccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Intruccion2.Location = new System.Drawing.Point(552, 212);
+            this.Intruccion2.Location = new System.Drawing.Point(291, 172);
+            this.Intruccion2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Intruccion2.Name = "Intruccion2";
-            this.Intruccion2.Size = new System.Drawing.Size(320, 46);
+            this.Intruccion2.Size = new System.Drawing.Size(240, 37);
             this.Intruccion2.TabIndex = 40;
-            this.Intruccion2.Text = "Listado de los libros:";
+            this.Intruccion2.Text = "Listado de los libros registrados:";
             this.Intruccion2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Intruccion2.Click += new System.EventHandler(this.label5_Click_1);
             // 
-            // btn_actualizar
+            // btn_guardar
             // 
-            this.btn_actualizar.BackColor = System.Drawing.Color.SandyBrown;
-            this.btn_actualizar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_actualizar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_actualizar.Location = new System.Drawing.Point(75, 634);
-            this.btn_actualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(316, 37);
-            this.btn_actualizar.TabIndex = 41;
-            this.btn_actualizar.Text = "Actualizar";
-            this.btn_actualizar.UseVisualStyleBackColor = false;
+            this.btn_guardar.BackColor = System.Drawing.Color.SandyBrown;
+            this.btn_guardar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_guardar.Location = new System.Drawing.Point(20, 481);
+            this.btn_guardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(237, 30);
+            this.btn_guardar.TabIndex = 42;
+            this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.UseVisualStyleBackColor = false;
+            // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.BackColor = System.Drawing.Color.SandyBrown;
+            this.btn_eliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_eliminar.Location = new System.Drawing.Point(20, 515);
+            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(237, 30);
+            this.btn_eliminar.TabIndex = 43;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.UseVisualStyleBackColor = false;
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.BackColor = System.Drawing.Color.SandyBrown;
+            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_cancelar.Location = new System.Drawing.Point(20, 549);
+            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(237, 30);
+            this.btn_cancelar.TabIndex = 44;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = false;
+            // 
+            // libreriagandtablas
+            // 
+            this.libreriagandtablas.DataSetName = "libreriagandtablas";
+            this.libreriagandtablas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // libroBindingSource
+            // 
+            this.libroBindingSource.DataMember = "libro";
+            this.libroBindingSource.DataSource = this.libreriagandtablas;
+            // 
+            // libroTableAdapter
+            // 
+            this.libroTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.clienteTableAdapter = null;
+            this.tableAdapterManager.inventarioTableAdapter = null;
+            this.tableAdapterManager.libroTableAdapter = this.libroTableAdapter;
+            this.tableAdapterManager.UpdateOrder = proyectolibreriaOF1.libreriagandtablasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.ventasTableAdapter = null;
+            // 
+            // idlibroDataGridViewTextBoxColumn
+            // 
+            this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "id_libro";
+            this.idlibroDataGridViewTextBoxColumn.HeaderText = "id_libro";
+            this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
+            // 
+            // nomlibroDataGridViewTextBoxColumn
+            // 
+            this.nomlibroDataGridViewTextBoxColumn.DataPropertyName = "nom_libro";
+            this.nomlibroDataGridViewTextBoxColumn.HeaderText = "nom_libro";
+            this.nomlibroDataGridViewTextBoxColumn.Name = "nomlibroDataGridViewTextBoxColumn";
+            // 
+            // autorDataGridViewTextBoxColumn
+            // 
+            this.autorDataGridViewTextBoxColumn.DataPropertyName = "autor";
+            this.autorDataGridViewTextBoxColumn.HeaderText = "autor";
+            this.autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
+            // 
+            // generoDataGridViewTextBoxColumn
+            // 
+            this.generoDataGridViewTextBoxColumn.DataPropertyName = "genero";
+            this.generoDataGridViewTextBoxColumn.HeaderText = "genero";
+            this.generoDataGridViewTextBoxColumn.Name = "generoDataGridViewTextBoxColumn";
+            // 
+            // editorialDataGridViewTextBoxColumn
+            // 
+            this.editorialDataGridViewTextBoxColumn.DataPropertyName = "editorial";
+            this.editorialDataGridViewTextBoxColumn.HeaderText = "editorial";
+            this.editorialDataGridViewTextBoxColumn.Name = "editorialDataGridViewTextBoxColumn";
+            // 
+            // edicionDataGridViewTextBoxColumn
+            // 
+            this.edicionDataGridViewTextBoxColumn.DataPropertyName = "edicion";
+            this.edicionDataGridViewTextBoxColumn.HeaderText = "edicion";
+            this.edicionDataGridViewTextBoxColumn.Name = "edicionDataGridViewTextBoxColumn";
+            // 
+            // añoDataGridViewTextBoxColumn
+            // 
+            this.añoDataGridViewTextBoxColumn.DataPropertyName = "año";
+            this.añoDataGridViewTextBoxColumn.HeaderText = "año";
+            this.añoDataGridViewTextBoxColumn.Name = "añoDataGridViewTextBoxColumn";
+            // 
+            // idiomaDataGridViewTextBoxColumn
+            // 
+            this.idiomaDataGridViewTextBoxColumn.DataPropertyName = "idioma";
+            this.idiomaDataGridViewTextBoxColumn.HeaderText = "idioma";
+            this.idiomaDataGridViewTextBoxColumn.Name = "idiomaDataGridViewTextBoxColumn";
+            // 
+            // paginasDataGridViewTextBoxColumn
+            // 
+            this.paginasDataGridViewTextBoxColumn.DataPropertyName = "paginas";
+            this.paginasDataGridViewTextBoxColumn.HeaderText = "paginas";
+            this.paginasDataGridViewTextBoxColumn.Name = "paginasDataGridViewTextBoxColumn";
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            // 
+            // sipnosisDataGridViewTextBoxColumn
+            // 
+            this.sipnosisDataGridViewTextBoxColumn.DataPropertyName = "sipnosis";
+            this.sipnosisDataGridViewTextBoxColumn.HeaderText = "sipnosis";
+            this.sipnosisDataGridViewTextBoxColumn.Name = "sipnosisDataGridViewTextBoxColumn";
             // 
             // editarlibros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
-            this.ClientSize = new System.Drawing.Size(1201, 742);
-            this.Controls.Add(this.btn_actualizar);
+            this.ClientSize = new System.Drawing.Size(1459, 603);
+            this.Controls.Add(this.btn_cancelar);
+            this.Controls.Add(this.btn_eliminar);
+            this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.Intruccion2);
             this.Controls.Add(this.Intruccion1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btn_limpiar);
             this.Controls.Add(this.sipnosis);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txtsipnosis);
             this.Controls.Add(this.precio);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtprecio);
             this.Controls.Add(this.paginas);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtpaginas);
             this.Controls.Add(this.idioma);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtidioma);
             this.Controls.Add(this.año);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtaño);
             this.Controls.Add(this.edicion);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtedicion);
             this.Controls.Add(this.editorial);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txteditorial);
             this.Controls.Add(this.genero);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtgenero);
             this.Controls.Add(this.autor);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtautor);
             this.Controls.Add(this.nombre);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.TituloLibreria1);
-            this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TituloEditar);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "editarlibros";
             this.Text = "Sistema de Libreria - Editar Libros";
             this.Load += new System.EventHandler(this.editarlibros_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libreriagandtablas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -476,33 +609,48 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.ToolStripMenuItem consultarComprasToolStripMenuItem;
         private System.Windows.Forms.Label TituloEditar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.Label TituloLibreria1;
         private System.Windows.Forms.Label nombre;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label genero;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtgenero;
         private System.Windows.Forms.Label autor;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtautor;
         private System.Windows.Forms.Label edicion;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtedicion;
         private System.Windows.Forms.Label editorial;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txteditorial;
         private System.Windows.Forms.Label idioma;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtidioma;
         private System.Windows.Forms.Label año;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtaño;
         private System.Windows.Forms.Label precio;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtprecio;
         private System.Windows.Forms.Label paginas;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtpaginas;
         private System.Windows.Forms.Label sipnosis;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Button btn_limpiar;
+        private System.Windows.Forms.TextBox txtsipnosis;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label Intruccion1;
         private System.Windows.Forms.Label Intruccion2;
-        private System.Windows.Forms.Button btn_actualizar;
+        private System.Windows.Forms.Button btn_guardar;
+        private System.Windows.Forms.Button btn_eliminar;
+        private System.Windows.Forms.Button btn_cancelar;
+        private libreriagandtablas libreriagandtablas;
+        private System.Windows.Forms.BindingSource libroBindingSource;
+        private libreriagandtablasTableAdapters.libroTableAdapter libroTableAdapter;
+        private libreriagandtablasTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idlibroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomlibroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn autorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn generoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn editorialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn edicionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn añoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idiomaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paginasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sipnosisDataGridViewTextBoxColumn;
     }
 }
