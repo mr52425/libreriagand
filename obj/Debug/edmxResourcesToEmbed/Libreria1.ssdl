@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="libreriagandModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cliente">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom_cliente" Type="varchar" MaxLength="50" />
+    <Property Name="ape_cliente" Type="varchar" MaxLength="50" />
+    <Property Name="edad" Type="int" />
+    <Property Name="direccion" Type="varchar" MaxLength="50" />
+    <Property Name="telefono" Type="int" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="tipo_cliente" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="inventario">
+    <Key>
+      <PropertyRef Name="id_inventario" />
+    </Key>
+    <Property Name="id_inventario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_libro" Type="int" Nullable="false" />
+    <Property Name="cantidad" Type="int" />
+  </EntityType>
+  <EntityType Name="libro">
+    <Key>
+      <PropertyRef Name="id_libro" />
+    </Key>
+    <Property Name="id_libro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom_libro" Type="varchar" MaxLength="50" />
+    <Property Name="autor" Type="varchar" MaxLength="50" />
+    <Property Name="genero" Type="varchar" MaxLength="50" />
+    <Property Name="editorial" Type="varchar" MaxLength="50" />
+    <Property Name="edicion" Type="varchar" MaxLength="50" />
+    <Property Name="año" Type="int" />
+    <Property Name="idioma" Type="varchar" MaxLength="50" />
+    <Property Name="paginas" Type="int" />
+    <Property Name="precio" Type="money" />
+    <Property Name="sipnosis" Type="varchar" MaxLength="600" />
+  </EntityType>
+  <EntityType Name="ventas">
+    <Key>
+      <PropertyRef Name="id_compra" />
+    </Key>
+    <Property Name="id_compra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+    <Property Name="id_libro" Type="int" Nullable="false" />
+    <Property Name="id_inventario" Type="int" Nullable="false" />
+    <Property Name="precio_venta" Type="money" />
+    <Property Name="fecha" Type="date" />
+  </EntityType>
+  <Association Name="FK__inventari__id_li__71D1E811">
+    <End Role="libro" Type="Self.libro" Multiplicity="1" />
+    <End Role="inventario" Type="Self.inventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="libro">
+        <PropertyRef Name="id_libro" />
+      </Principal>
+      <Dependent Role="inventario">
+        <PropertyRef Name="id_libro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ventas__id_clien__76969D2E">
+    <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+    <End Role="ventas" Type="Self.ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="ventas">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ventas__id_inven__787EE5A0">
+    <End Role="inventario" Type="Self.inventario" Multiplicity="1" />
+    <End Role="ventas" Type="Self.ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="inventario">
+        <PropertyRef Name="id_inventario" />
+      </Principal>
+      <Dependent Role="ventas">
+        <PropertyRef Name="id_inventario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ventas__id_libro__778AC167">
+    <End Role="libro" Type="Self.libro" Multiplicity="1" />
+    <End Role="ventas" Type="Self.ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="libro">
+        <PropertyRef Name="id_libro" />
+      </Principal>
+      <Dependent Role="ventas">
+        <PropertyRef Name="id_libro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="libreriagandModel1StoreContainer">
+    <EntitySet Name="cliente" EntityType="Self.cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="inventario" EntityType="Self.inventario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="libro" EntityType="Self.libro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ventas" EntityType="Self.ventas" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__inventari__id_li__71D1E811" Association="Self.FK__inventari__id_li__71D1E811">
+      <End Role="libro" EntitySet="libro" />
+      <End Role="inventario" EntitySet="inventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ventas__id_clien__76969D2E" Association="Self.FK__ventas__id_clien__76969D2E">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="ventas" EntitySet="ventas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ventas__id_inven__787EE5A0" Association="Self.FK__ventas__id_inven__787EE5A0">
+      <End Role="inventario" EntitySet="inventario" />
+      <End Role="ventas" EntitySet="ventas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ventas__id_libro__778AC167" Association="Self.FK__ventas__id_libro__778AC167">
+      <End Role="libro" EntitySet="libro" />
+      <End Role="ventas" EntitySet="ventas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

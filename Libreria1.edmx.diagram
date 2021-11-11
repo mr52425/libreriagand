@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="007390380fa443f4b8cb426de616a5ff" Name="Diagram1">
+        <EntityTypeShape EntityType="libreriagandModel1.cliente" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="libreriagandModel1.inventario" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="libreriagandModel1.libro" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="libreriagandModel1.ventas" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="libreriagandModel1.FK__ventas__id_clien__76969D2E" ManuallyRouted="false" />
+        <AssociationConnector Association="libreriagandModel1.FK__inventari__id_li__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="libreriagandModel1.FK__ventas__id_inven__787EE5A0" ManuallyRouted="false" />
+        <AssociationConnector Association="libreriagandModel1.FK__ventas__id_libro__778AC167" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
