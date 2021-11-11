@@ -94,39 +94,39 @@ namespace proyectolibreriaOF1
                 {
                     MessageBox.Show("¡Por favor digite el nombre del libro!", "Mensaje de Advertencia.");
                 }
-                if (txtautor.Text.Length == 0)
+                else if (txtautor.Text.Length == 0)
                 {
                     MessageBox.Show("¡Por favor digite el nombre del autor!");
                 }
-                if (txtgenero.Text.Length == 0)
+                else if(txtgenero.Text.Length == 0)
                 {
                     MessageBox.Show("¡Por favor digite el genero del libro!");
                 }
-                if (txteditorial.Text.Length == 0)
+                else if(txteditorial.Text.Length == 0)
                 {
                     MessageBox.Show("¡Por favor digite el nombre de la editorial del libro!");
                 }
-                if (txtedicion.Text.Length == 0)
+                else if(txtedicion.Text.Length == 0)
                 {
                     MessageBox.Show("¡Por favor digite el número de la edición del libro!");
                 }
-                if (txtaño.Text.Length == 0)
+                else if(txtaño.Text.Length == 0)
                 {
                     MessageBox.Show("¡Por favor digite el año del libro!");
                 }
-                if (txtidioma.Text.Length == 0)
+                else if(txtidioma.Text.Length == 0)
                 {
                     MessageBox.Show("¡Por favor digite el idioma del libro!");
                 }
-                if (txtpaginas.Text.Length == 0)
+                else if(txtpaginas.Text.Length == 0)
                 {
                     MessageBox.Show("¡Por favor digite el número de páginas del libro!");
                 }
-                if (txtprecio.Text.Length == 0)
+                else if(txtprecio.Text.Length == 0)
                 {
                     MessageBox.Show("¡Por favor digite el precio del libro!");
                 }
-                if (txtsipnosis.Text.Length == 0)
+                else if(txtsipnosis.Text.Length == 0)
                 {
                     MessageBox.Show("¡Por favor digite la sipnosis del libro!");
                 }
