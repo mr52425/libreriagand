@@ -107,7 +107,7 @@ namespace proyectolibreriaOF1
             this.TituloLibreria3.Name = "TituloLibreria3";
             this.TituloLibreria3.Size = new System.Drawing.Size(1367, 70);
             this.TituloLibreria3.TabIndex = 17;
-            this.TituloLibreria3.Text = "Sistema de Libreria";
+            this.TituloLibreria3.Text = "Sistema de Librería";
             this.TituloLibreria3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TituloInventario

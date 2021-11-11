@@ -30,6 +30,9 @@ namespace proyectolibreriaOF1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.solicitarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -167,7 +170,7 @@ namespace proyectolibreriaOF1
             this.TituloLibreria1.Name = "TituloLibreria1";
             this.TituloLibreria1.Size = new System.Drawing.Size(1459, 70);
             this.TituloLibreria1.TabIndex = 15;
-            this.TituloLibreria1.Text = "Sistema de Libreria";
+            this.TituloLibreria1.Text = "Sistema de Librería";
             this.TituloLibreria1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // nombre
@@ -375,7 +378,17 @@ namespace proyectolibreriaOF1
             // 
             this.dgv_editarlibros.AllowUserToDeleteRows = false;
             this.dgv_editarlibros.AutoGenerateColumns = false;
-            this.dgv_editarlibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_editarlibros.BackgroundColor = System.Drawing.Color.BurlyWood;
+            this.dgv_editarlibros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_editarlibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_editarlibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_editarlibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idlibroDataGridViewTextBoxColumn,
             this.nomlibroDataGridViewTextBoxColumn,
@@ -389,10 +402,26 @@ namespace proyectolibreriaOF1
             this.precioDataGridViewTextBoxColumn,
             this.sipnosisDataGridViewTextBoxColumn});
             this.dgv_editarlibros.DataSource = this.libroBindingSource;
+            this.dgv_editarlibros.EnableHeadersVisualStyles = false;
+            this.dgv_editarlibros.GridColor = System.Drawing.Color.SaddleBrown;
             this.dgv_editarlibros.Location = new System.Drawing.Point(294, 211);
             this.dgv_editarlibros.Name = "dgv_editarlibros";
             this.dgv_editarlibros.ReadOnly = true;
+            this.dgv_editarlibros.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_editarlibros.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_editarlibros.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgv_editarlibros.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_editarlibros.Size = new System.Drawing.Size(1153, 369);
             this.dgv_editarlibros.TabIndex = 38;
             this.dgv_editarlibros.DoubleClick += new System.EventHandler(this.dgv_editarlibros_DoubleClick);
