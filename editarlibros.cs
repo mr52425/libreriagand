@@ -90,46 +90,6 @@ namespace proyectolibreriaOF1
                 modelo.paginas = int.Parse(txtpaginas.Text.Trim());
                 modelo.precio = decimal.Parse(txtprecio.Text.Trim());
                 modelo.sipnosis = txtsipnosis.Text.Trim();
-                if (txtnombre.Text == "")
-                {
-                    MessageBox.Show("¡Por favor digite el nombre del libro!", "Mensaje de Advertencia.");
-                }
-                else if (txtautor.Text == "")
-                {
-                    MessageBox.Show("¡Por favor digite el nombre del autor!");
-                }
-                else if(txtgenero.Text == "")
-                {
-                    MessageBox.Show("¡Por favor digite el genero del libro!");
-                }
-                else if(txteditorial.Text == "")
-                {
-                    MessageBox.Show("¡Por favor digite el nombre de la editorial del libro!");
-                }
-                else if(txtedicion.Text == "")
-                {
-                    MessageBox.Show("¡Por favor digite el número de la edición del libro!");
-                }
-                else if(txtaño.Text == "")
-                {
-                    MessageBox.Show("¡Por favor digite el año del libro!");
-                }
-                else if(txtidioma.Text == "")
-                {
-                    MessageBox.Show("¡Por favor digite el idioma del libro!");
-                }
-                else if(txtpaginas.Text == "")
-                {
-                    MessageBox.Show("¡Por favor digite el número de páginas del libro!");
-                }
-                else if(txtprecio.Text == "")
-                {
-                    MessageBox.Show("¡Por favor digite el precio del libro!");
-                }
-                else if(txtsipnosis.Text == "")
-                {
-                    MessageBox.Show("¡Por favor digite la sipnosis del libro!");
-                }
                 else
                 {
                     using (libreriagandEntities1 DB = new libreriagandEntities1())
@@ -147,6 +107,46 @@ namespace proyectolibreriaOF1
             }
             catch (Exception ex)
             {
+                if (txtnombre.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el nombre del libro!", "Mensaje de Advertencia.");
+                }
+                if (txtautor.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el nombre del autor!");
+                }
+                if (txtgenero.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el genero del libro!");
+                }
+                if (txteditorial.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el nombre de la editorial del libro!");
+                }
+                if (txtedicion.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el número de la edición del libro!");
+                }
+                if (txtaño.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el año del libro!");
+                }
+                if (txtidioma.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el idioma del libro!");
+                }
+                if (txtpaginas.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el número de páginas del libro!");
+                }
+                if (txtprecio.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el precio del libro!");
+                }
+                if (txtsipnosis.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite la sipnosis del libro!");
+                }
                 MessageBox.Show(ex.Message);
             }
         }
