@@ -25,6 +25,7 @@ namespace proyectolibreriaOF1
             this.libroTableAdapter.Fill(this.libreriagandtablas.libro);
             llenarGrid();
             clear();
+            this.ActiveControl = txtnombre;
         }
 
         private void solicitarLibrosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -79,7 +80,6 @@ namespace proyectolibreriaOF1
         {
             try
             {
-                modelo.id_libro = int.Parse(txtlibro.Text.Trim());
                 modelo.nom_libro = txtnombre.Text.Trim();
                 modelo.autor = txtautor.Text.Trim();
                 modelo.genero = txtgenero.Text.Trim();
@@ -90,10 +90,6 @@ namespace proyectolibreriaOF1
                 modelo.paginas = int.Parse(txtpaginas.Text.Trim());
                 modelo.precio = decimal.Parse(txtprecio.Text.Trim());
                 modelo.sipnosis = txtsipnosis.Text.Trim();
-                if (txtlibro.Text == "")
-                {
-                    MessageBox.Show("¡Por favor digite el id del libro!");
-                }
                 if (txtnombre.Text == "")
                 {
                     MessageBox.Show("¡Por favor digite el nombre del libro!");
@@ -181,7 +177,7 @@ namespace proyectolibreriaOF1
         {
             try
             {
-                modelo.id_libro = Convert.ToInt32(dgv_editarlibros.CurrentRow.Cells["id_libro"].Value);
+                modelo.id_libro = Convert.ToInt32(dgv_editarlibros.CurrentRow.Cells["idlibroDataGridViewTextBoxColumn"].Value);
                 using (libreriagandEntities1 DB = new libreriagandEntities1())
                 {
                     modelo = DB.libro.Where(x => x.id_libro == modelo.id_libro).FirstOrDefault();
@@ -216,10 +212,10 @@ namespace proyectolibreriaOF1
                         DB.libro.Attach(modelo);
                     DB.libro.Remove(modelo);
                     DB.SaveChanges();
-                    clear();
-                    llenarGrid();
-                    MessageBox.Show("¡Se elimino correctamente!");
                 }
+            clear();
+            llenarGrid();
+            MessageBox.Show("¡Se elimino correctamente!");
         }
     }
 }

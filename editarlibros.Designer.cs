@@ -60,15 +60,6 @@ namespace proyectolibreriaOF1
             this.txtsipnosis = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_editarlibros = new System.Windows.Forms.DataGridView();
-            this.Intruccion1 = new System.Windows.Forms.Label();
-            this.Intruccion2 = new System.Windows.Forms.Label();
-            this.btn_guardar = new System.Windows.Forms.Button();
-            this.btn_eliminar = new System.Windows.Forms.Button();
-            this.btn_cancelar = new System.Windows.Forms.Button();
-            this.libreriagandtablas = new proyectolibreriaOF1.libreriagandtablas();
-            this.libroBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.libroTableAdapter = new proyectolibreriaOF1.libreriagandtablasTableAdapters.libroTableAdapter();
-            this.tableAdapterManager = new proyectolibreriaOF1.libreriagandtablasTableAdapters.TableAdapterManager();
             this.idlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.autorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,12 +71,19 @@ namespace proyectolibreriaOF1
             this.paginasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sipnosisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_libro = new System.Windows.Forms.Label();
-            this.txtlibro = new System.Windows.Forms.TextBox();
+            this.libroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.libreriagandtablas = new proyectolibreriaOF1.libreriagandtablas();
+            this.Intruccion1 = new System.Windows.Forms.Label();
+            this.Intruccion2 = new System.Windows.Forms.Label();
+            this.btn_guardar = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.libroTableAdapter = new proyectolibreriaOF1.libreriagandtablasTableAdapters.libroTableAdapter();
+            this.tableAdapterManager = new proyectolibreriaOF1.libreriagandtablasTableAdapters.TableAdapterManager();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_editarlibros)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libreriagandtablas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libreriagandtablas)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -186,7 +184,7 @@ namespace proyectolibreriaOF1
             // txtnombre
             // 
             this.txtnombre.Location = new System.Drawing.Point(121, 238);
-            this.txtnombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(136, 20);
             this.txtnombre.TabIndex = 16;
@@ -205,7 +203,7 @@ namespace proyectolibreriaOF1
             // txtgenero
             // 
             this.txtgenero.Location = new System.Drawing.Point(121, 286);
-            this.txtgenero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtgenero.Margin = new System.Windows.Forms.Padding(2);
             this.txtgenero.Name = "txtgenero";
             this.txtgenero.Size = new System.Drawing.Size(136, 20);
             this.txtgenero.TabIndex = 20;
@@ -224,7 +222,7 @@ namespace proyectolibreriaOF1
             // txtautor
             // 
             this.txtautor.Location = new System.Drawing.Point(121, 262);
-            this.txtautor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtautor.Margin = new System.Windows.Forms.Padding(2);
             this.txtautor.Name = "txtautor";
             this.txtautor.Size = new System.Drawing.Size(136, 20);
             this.txtautor.TabIndex = 18;
@@ -244,7 +242,7 @@ namespace proyectolibreriaOF1
             // txtedicion
             // 
             this.txtedicion.Location = new System.Drawing.Point(121, 334);
-            this.txtedicion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtedicion.Margin = new System.Windows.Forms.Padding(2);
             this.txtedicion.Name = "txtedicion";
             this.txtedicion.Size = new System.Drawing.Size(136, 20);
             this.txtedicion.TabIndex = 24;
@@ -264,7 +262,7 @@ namespace proyectolibreriaOF1
             // txteditorial
             // 
             this.txteditorial.Location = new System.Drawing.Point(121, 310);
-            this.txteditorial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txteditorial.Margin = new System.Windows.Forms.Padding(2);
             this.txteditorial.Name = "txteditorial";
             this.txteditorial.Size = new System.Drawing.Size(136, 20);
             this.txteditorial.TabIndex = 22;
@@ -283,7 +281,7 @@ namespace proyectolibreriaOF1
             // txtidioma
             // 
             this.txtidioma.Location = new System.Drawing.Point(121, 382);
-            this.txtidioma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtidioma.Margin = new System.Windows.Forms.Padding(2);
             this.txtidioma.Name = "txtidioma";
             this.txtidioma.Size = new System.Drawing.Size(136, 20);
             this.txtidioma.TabIndex = 28;
@@ -302,7 +300,7 @@ namespace proyectolibreriaOF1
             // txtaño
             // 
             this.txtaño.Location = new System.Drawing.Point(121, 358);
-            this.txtaño.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtaño.Margin = new System.Windows.Forms.Padding(2);
             this.txtaño.Name = "txtaño";
             this.txtaño.Size = new System.Drawing.Size(136, 20);
             this.txtaño.TabIndex = 26;
@@ -321,7 +319,7 @@ namespace proyectolibreriaOF1
             // txtprecio
             // 
             this.txtprecio.Location = new System.Drawing.Point(121, 430);
-            this.txtprecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtprecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtprecio.Name = "txtprecio";
             this.txtprecio.Size = new System.Drawing.Size(136, 20);
             this.txtprecio.TabIndex = 32;
@@ -340,7 +338,7 @@ namespace proyectolibreriaOF1
             // txtpaginas
             // 
             this.txtpaginas.Location = new System.Drawing.Point(121, 406);
-            this.txtpaginas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtpaginas.Margin = new System.Windows.Forms.Padding(2);
             this.txtpaginas.Name = "txtpaginas";
             this.txtpaginas.Size = new System.Drawing.Size(136, 20);
             this.txtpaginas.TabIndex = 30;
@@ -359,7 +357,7 @@ namespace proyectolibreriaOF1
             // txtsipnosis
             // 
             this.txtsipnosis.Location = new System.Drawing.Point(121, 454);
-            this.txtsipnosis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtsipnosis.Margin = new System.Windows.Forms.Padding(2);
             this.txtsipnosis.Name = "txtsipnosis";
             this.txtsipnosis.Size = new System.Drawing.Size(136, 20);
             this.txtsipnosis.TabIndex = 34;
@@ -375,6 +373,7 @@ namespace proyectolibreriaOF1
             // 
             // dgv_editarlibros
             // 
+            this.dgv_editarlibros.AllowUserToDeleteRows = false;
             this.dgv_editarlibros.AutoGenerateColumns = false;
             this.dgv_editarlibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_editarlibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -397,6 +396,93 @@ namespace proyectolibreriaOF1
             this.dgv_editarlibros.Size = new System.Drawing.Size(1153, 369);
             this.dgv_editarlibros.TabIndex = 38;
             this.dgv_editarlibros.DoubleClick += new System.EventHandler(this.dgv_editarlibros_DoubleClick);
+            // 
+            // idlibroDataGridViewTextBoxColumn
+            // 
+            this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "id_libro";
+            this.idlibroDataGridViewTextBoxColumn.HeaderText = "id_libro";
+            this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
+            this.idlibroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomlibroDataGridViewTextBoxColumn
+            // 
+            this.nomlibroDataGridViewTextBoxColumn.DataPropertyName = "nom_libro";
+            this.nomlibroDataGridViewTextBoxColumn.HeaderText = "nom_libro";
+            this.nomlibroDataGridViewTextBoxColumn.Name = "nomlibroDataGridViewTextBoxColumn";
+            this.nomlibroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // autorDataGridViewTextBoxColumn
+            // 
+            this.autorDataGridViewTextBoxColumn.DataPropertyName = "autor";
+            this.autorDataGridViewTextBoxColumn.HeaderText = "autor";
+            this.autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
+            this.autorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // generoDataGridViewTextBoxColumn
+            // 
+            this.generoDataGridViewTextBoxColumn.DataPropertyName = "genero";
+            this.generoDataGridViewTextBoxColumn.HeaderText = "genero";
+            this.generoDataGridViewTextBoxColumn.Name = "generoDataGridViewTextBoxColumn";
+            this.generoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // editorialDataGridViewTextBoxColumn
+            // 
+            this.editorialDataGridViewTextBoxColumn.DataPropertyName = "editorial";
+            this.editorialDataGridViewTextBoxColumn.HeaderText = "editorial";
+            this.editorialDataGridViewTextBoxColumn.Name = "editorialDataGridViewTextBoxColumn";
+            this.editorialDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // edicionDataGridViewTextBoxColumn
+            // 
+            this.edicionDataGridViewTextBoxColumn.DataPropertyName = "edicion";
+            this.edicionDataGridViewTextBoxColumn.HeaderText = "edicion";
+            this.edicionDataGridViewTextBoxColumn.Name = "edicionDataGridViewTextBoxColumn";
+            this.edicionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // añoDataGridViewTextBoxColumn
+            // 
+            this.añoDataGridViewTextBoxColumn.DataPropertyName = "año";
+            this.añoDataGridViewTextBoxColumn.HeaderText = "año";
+            this.añoDataGridViewTextBoxColumn.Name = "añoDataGridViewTextBoxColumn";
+            this.añoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idiomaDataGridViewTextBoxColumn
+            // 
+            this.idiomaDataGridViewTextBoxColumn.DataPropertyName = "idioma";
+            this.idiomaDataGridViewTextBoxColumn.HeaderText = "idioma";
+            this.idiomaDataGridViewTextBoxColumn.Name = "idiomaDataGridViewTextBoxColumn";
+            this.idiomaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // paginasDataGridViewTextBoxColumn
+            // 
+            this.paginasDataGridViewTextBoxColumn.DataPropertyName = "paginas";
+            this.paginasDataGridViewTextBoxColumn.HeaderText = "paginas";
+            this.paginasDataGridViewTextBoxColumn.Name = "paginasDataGridViewTextBoxColumn";
+            this.paginasDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sipnosisDataGridViewTextBoxColumn
+            // 
+            this.sipnosisDataGridViewTextBoxColumn.DataPropertyName = "sipnosis";
+            this.sipnosisDataGridViewTextBoxColumn.HeaderText = "sipnosis";
+            this.sipnosisDataGridViewTextBoxColumn.Name = "sipnosisDataGridViewTextBoxColumn";
+            this.sipnosisDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // libroBindingSource
+            // 
+            this.libroBindingSource.DataMember = "libro";
+            this.libroBindingSource.DataSource = this.libreriagandtablas;
+            // 
+            // libreriagandtablas
+            // 
+            this.libreriagandtablas.DataSetName = "libreriagandtablas";
+            this.libreriagandtablas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Intruccion1
             // 
@@ -467,16 +553,6 @@ namespace proyectolibreriaOF1
             this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
-            // libreriagandtablas
-            // 
-            this.libreriagandtablas.DataSetName = "libreriagandtablas";
-            this.libreriagandtablas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // libroBindingSource
-            // 
-            this.libroBindingSource.DataMember = "libro";
-            this.libroBindingSource.DataSource = this.libreriagandtablas;
-            // 
             // libroTableAdapter
             // 
             this.libroTableAdapter.ClearBeforeFill = true;
@@ -490,99 +566,12 @@ namespace proyectolibreriaOF1
             this.tableAdapterManager.UpdateOrder = proyectolibreriaOF1.libreriagandtablasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.ventasTableAdapter = null;
             // 
-            // idlibroDataGridViewTextBoxColumn
-            // 
-            this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "id_libro";
-            this.idlibroDataGridViewTextBoxColumn.HeaderText = "id_libro";
-            this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
-            // 
-            // nomlibroDataGridViewTextBoxColumn
-            // 
-            this.nomlibroDataGridViewTextBoxColumn.DataPropertyName = "nom_libro";
-            this.nomlibroDataGridViewTextBoxColumn.HeaderText = "nom_libro";
-            this.nomlibroDataGridViewTextBoxColumn.Name = "nomlibroDataGridViewTextBoxColumn";
-            // 
-            // autorDataGridViewTextBoxColumn
-            // 
-            this.autorDataGridViewTextBoxColumn.DataPropertyName = "autor";
-            this.autorDataGridViewTextBoxColumn.HeaderText = "autor";
-            this.autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
-            // 
-            // generoDataGridViewTextBoxColumn
-            // 
-            this.generoDataGridViewTextBoxColumn.DataPropertyName = "genero";
-            this.generoDataGridViewTextBoxColumn.HeaderText = "genero";
-            this.generoDataGridViewTextBoxColumn.Name = "generoDataGridViewTextBoxColumn";
-            // 
-            // editorialDataGridViewTextBoxColumn
-            // 
-            this.editorialDataGridViewTextBoxColumn.DataPropertyName = "editorial";
-            this.editorialDataGridViewTextBoxColumn.HeaderText = "editorial";
-            this.editorialDataGridViewTextBoxColumn.Name = "editorialDataGridViewTextBoxColumn";
-            // 
-            // edicionDataGridViewTextBoxColumn
-            // 
-            this.edicionDataGridViewTextBoxColumn.DataPropertyName = "edicion";
-            this.edicionDataGridViewTextBoxColumn.HeaderText = "edicion";
-            this.edicionDataGridViewTextBoxColumn.Name = "edicionDataGridViewTextBoxColumn";
-            // 
-            // añoDataGridViewTextBoxColumn
-            // 
-            this.añoDataGridViewTextBoxColumn.DataPropertyName = "año";
-            this.añoDataGridViewTextBoxColumn.HeaderText = "año";
-            this.añoDataGridViewTextBoxColumn.Name = "añoDataGridViewTextBoxColumn";
-            // 
-            // idiomaDataGridViewTextBoxColumn
-            // 
-            this.idiomaDataGridViewTextBoxColumn.DataPropertyName = "idioma";
-            this.idiomaDataGridViewTextBoxColumn.HeaderText = "idioma";
-            this.idiomaDataGridViewTextBoxColumn.Name = "idiomaDataGridViewTextBoxColumn";
-            // 
-            // paginasDataGridViewTextBoxColumn
-            // 
-            this.paginasDataGridViewTextBoxColumn.DataPropertyName = "paginas";
-            this.paginasDataGridViewTextBoxColumn.HeaderText = "paginas";
-            this.paginasDataGridViewTextBoxColumn.Name = "paginasDataGridViewTextBoxColumn";
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            // 
-            // sipnosisDataGridViewTextBoxColumn
-            // 
-            this.sipnosisDataGridViewTextBoxColumn.DataPropertyName = "sipnosis";
-            this.sipnosisDataGridViewTextBoxColumn.HeaderText = "sipnosis";
-            this.sipnosisDataGridViewTextBoxColumn.Name = "sipnosisDataGridViewTextBoxColumn";
-            // 
-            // id_libro
-            // 
-            this.id_libro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_libro.Location = new System.Drawing.Point(17, 214);
-            this.id_libro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.id_libro.Name = "id_libro";
-            this.id_libro.Size = new System.Drawing.Size(72, 20);
-            this.id_libro.TabIndex = 46;
-            this.id_libro.Text = "Id: ";
-            this.id_libro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtlibro
-            // 
-            this.txtlibro.Location = new System.Drawing.Point(121, 214);
-            this.txtlibro.Margin = new System.Windows.Forms.Padding(2);
-            this.txtlibro.Name = "txtlibro";
-            this.txtlibro.Size = new System.Drawing.Size(136, 20);
-            this.txtlibro.TabIndex = 45;
-            // 
             // editarlibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.ClientSize = new System.Drawing.Size(1459, 603);
-            this.Controls.Add(this.id_libro);
-            this.Controls.Add(this.txtlibro);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_guardar);
@@ -614,15 +603,15 @@ namespace proyectolibreriaOF1
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TituloEditar);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "editarlibros";
             this.Text = "Sistema de Libreria - Editar Libros";
             this.Load += new System.EventHandler(this.editarlibros_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_editarlibros)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libreriagandtablas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libreriagandtablas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -680,7 +669,5 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.DataGridViewTextBoxColumn paginasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sipnosisDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label id_libro;
-        private System.Windows.Forms.TextBox txtlibro;
     }
 }
