@@ -90,28 +90,11 @@ namespace proyectolibreriaOF1
                 modelo.paginas = int.Parse(txtpaginas.Text.Trim());
                 modelo.precio = decimal.Parse(txtprecio.Text.Trim());
                 modelo.sipnosis = txtsipnosis.Text.Trim();
-                else
-                {
-                    using (libreriagandEntities1 DB = new libreriagandEntities1())
-                    {
-                        if (modelo.id_libro == 0)//insertar
-                            DB.libro.Add(modelo);
-                        else //modificar
-                            DB.Entry(modelo).State = EntityState.Modified;
-                        DB.SaveChanges();
-                    }
-                    clear();
-                    llenarGrid();
-                    MessageBox.Show("¡Regsitro guardado con exito!", "Mensaje de Confirmación.");
-                }
-            }
-            catch (Exception ex)
-            {
-                if (txtnombre.Text == "")
+                if (txtnombre.Text.Trim() == "")
                 {
                     MessageBox.Show("¡Por favor digite el nombre del libro!", "Mensaje de Advertencia.");
                 }
-                if (txtautor.Text == "")
+                if (txtautor.Text.Trim() == "")
                 {
                     MessageBox.Show("¡Por favor digite el nombre del autor!");
                 }
@@ -145,9 +128,26 @@ namespace proyectolibreriaOF1
                 }
                 if (txtsipnosis.Text == "")
                 {
-                    MessageBox.Show("¡Por favor digite la sipnosis del libro!");
+                    MessageBox.Show("¡Por favor digite la sipnosis del libro!", "Mensaje de Advertencia.");
                 }
-                MessageBox.Show(ex.Message);
+                else
+                {
+                    using (libreriagandEntities1 DB = new libreriagandEntities1())
+                    {
+                        if (modelo.id_libro == 0)//insertar
+                            DB.libro.Add(modelo);
+                        else //modificar
+                            DB.Entry(modelo).State = EntityState.Modified;
+                        DB.SaveChanges();
+                    }
+                    clear();
+                    llenarGrid();
+                    MessageBox.Show("¡Regsitro guardado con exito!", "Mensaje de Confirmación.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("¡Por favor digite los valores que se piden!", "Mensaje de Advertencia.");
             }
         }
 
