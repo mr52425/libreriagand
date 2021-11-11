@@ -185,7 +185,6 @@ namespace proyectolibreriaOF1
                 using (libreriagandEntities1 DB = new libreriagandEntities1())
                 {
                     modelo = DB.libro.Where(x => x.id_libro == modelo.id_libro).FirstOrDefault();
-                    txtlibro.Text = Convert.ToString(modelo.id_libro);
                     txtnombre.Text = modelo.nom_libro;
                     txtautor.Text = modelo.autor;
                     txtgenero.Text = modelo.genero;
