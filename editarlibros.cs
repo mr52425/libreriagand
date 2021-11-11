@@ -90,9 +90,9 @@ namespace proyectolibreriaOF1
                 modelo.paginas = int.Parse(txtpaginas.Text.Trim());
                 modelo.precio = decimal.Parse(txtprecio.Text.Trim());
                 modelo.sipnosis = txtsipnosis.Text.Trim();
-                if (txtnombre.Text == " ")
+                if (string.IsNullOrWhiteSpace(txtnombre.Text))
                 {
-                    MessageBox.Show("¡Por favor digite el nombre del libro!");
+                    MessageBox.Show("¡Por favor digite el nombre del libro!", "Mensaje de Advertencia.");
                 }
                 if (txtautor.Text == " ")
                 {
@@ -142,7 +142,7 @@ namespace proyectolibreriaOF1
                     }
                     clear();
                     llenarGrid();
-                    MessageBox.Show("¡Regsitro guardado con exito!");
+                    MessageBox.Show("¡Regsitro guardado con exito!", "Mensaje de Confirmación.");
                 }
             }
             catch (Exception ex)
@@ -214,9 +214,9 @@ namespace proyectolibreriaOF1
                     DB.SaveChanges();
                     clear();
                     llenarGrid();
-                    MessageBox.Show("¡Se elimino correctamente!");
+                    MessageBox.Show("¡Se elimino correctamente!", "Mensaje de Confirmación.");
                 }
-            MessageBox.Show("¡No se elimino el contenido!");
+            MessageBox.Show("¡No se elimino el contenido!", "Mensaje de Cancelación.");
         }
     }
 }
