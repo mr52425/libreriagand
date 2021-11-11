@@ -59,7 +59,7 @@ namespace proyectolibreriaOF1
             this.sipnosis = new System.Windows.Forms.Label();
             this.txtsipnosis = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_editarlibros = new System.Windows.Forms.DataGridView();
             this.Intruccion1 = new System.Windows.Forms.Label();
             this.Intruccion2 = new System.Windows.Forms.Label();
             this.btn_guardar = new System.Windows.Forms.Button();
@@ -81,7 +81,7 @@ namespace proyectolibreriaOF1
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sipnosisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_editarlibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libreriagandtablas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -371,11 +371,11 @@ namespace proyectolibreriaOF1
             this.label3.Size = new System.Drawing.Size(1184, 439);
             this.label3.TabIndex = 37;
             // 
-            // dataGridView1
+            // dgv_editarlibros
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_editarlibros.AutoGenerateColumns = false;
+            this.dgv_editarlibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_editarlibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idlibroDataGridViewTextBoxColumn,
             this.nomlibroDataGridViewTextBoxColumn,
             this.autorDataGridViewTextBoxColumn,
@@ -387,12 +387,13 @@ namespace proyectolibreriaOF1
             this.paginasDataGridViewTextBoxColumn,
             this.precioDataGridViewTextBoxColumn,
             this.sipnosisDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.libroBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(294, 211);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1153, 369);
-            this.dataGridView1.TabIndex = 38;
+            this.dgv_editarlibros.DataSource = this.libroBindingSource;
+            this.dgv_editarlibros.Location = new System.Drawing.Point(294, 211);
+            this.dgv_editarlibros.Name = "dgv_editarlibros";
+            this.dgv_editarlibros.RowHeadersWidth = 51;
+            this.dgv_editarlibros.Size = new System.Drawing.Size(1153, 369);
+            this.dgv_editarlibros.TabIndex = 38;
+            this.dgv_editarlibros.DoubleClick += new System.EventHandler(this.dgv_editarlibros_DoubleClick);
             // 
             // Intruccion1
             // 
@@ -446,6 +447,7 @@ namespace proyectolibreriaOF1
             this.btn_eliminar.TabIndex = 43;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = false;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_cancelar
             // 
@@ -460,6 +462,7 @@ namespace proyectolibreriaOF1
             this.btn_cancelar.TabIndex = 44;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // libreriagandtablas
             // 
@@ -561,7 +564,7 @@ namespace proyectolibreriaOF1
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.Intruccion2);
             this.Controls.Add(this.Intruccion1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_editarlibros);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.sipnosis);
             this.Controls.Add(this.txtsipnosis);
@@ -593,7 +596,7 @@ namespace proyectolibreriaOF1
             this.Load += new System.EventHandler(this.editarlibros_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_editarlibros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libreriagandtablas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -632,7 +635,7 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.Label sipnosis;
         private System.Windows.Forms.TextBox txtsipnosis;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_editarlibros;
         private System.Windows.Forms.Label Intruccion1;
         private System.Windows.Forms.Label Intruccion2;
         private System.Windows.Forms.Button btn_guardar;
