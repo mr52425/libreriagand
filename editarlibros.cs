@@ -90,43 +90,43 @@ namespace proyectolibreriaOF1
                 modelo.paginas = int.Parse(txtpaginas.Text.Trim());
                 modelo.precio = decimal.Parse(txtprecio.Text.Trim());
                 modelo.sipnosis = txtsipnosis.Text.Trim();
-                if (string.IsNullOrWhiteSpace(txtnombre.Text))
+                if (string.IsNullOrEmpty(txtnombre.Text))
                 {
                     MessageBox.Show("¡Por favor digite el nombre del libro!", "Mensaje de Advertencia.");
                 }
-                if (txtautor.Text == " ")
+                if (string.IsNullOrEmpty(txtautor.Text))
                 {
                     MessageBox.Show("¡Por favor digite el nombre del autor!");
                 }
-                if (txtgenero.Text == " ")
+                if (string.IsNullOrEmpty(txtgenero.Text))
                 {
                     MessageBox.Show("¡Por favor digite el genero del libro!");
                 }
-                if (txteditorial.Text == " ")
+                if (string.IsNullOrEmpty(txteditorial.Text))
                 {
                     MessageBox.Show("¡Por favor digite el nombre de la editorial del libro!");
                 }
-                if (txtedicion.Text == " ")
+                if (string.IsNullOrEmpty(txtedicion.Text))
                 {
                     MessageBox.Show("¡Por favor digite el número de la edición del libro!");
                 }
-                if (txtaño.Text == " ")
+                if (string.IsNullOrEmpty(txtaño.Text))
                 {
                     MessageBox.Show("¡Por favor digite el año del libro!");
                 }
-                if (txtidioma.Text == " ")
+                if (string.IsNullOrEmpty(txtidioma.Text))
                 {
                     MessageBox.Show("¡Por favor digite el idioma del libro!");
                 }
-                if (txtpaginas.Text == " ")
+                if (string.IsNullOrEmpty(txtpaginas.Text))
                 {
                     MessageBox.Show("¡Por favor digite el número de páginas del libro!");
                 }
-                if (txtprecio.Text == " ")
+                if (string.IsNullOrEmpty(txtprecio.Text))
                 {
                     MessageBox.Show("¡Por favor digite el precio del libro!");
                 }
-                if (txtsipnosis.Text == " ")
+                if (string.IsNullOrEmpty(txtsipnosis.Text))
                 {
                     MessageBox.Show("¡Por favor digite la sipnosis del libro!");
                 }
