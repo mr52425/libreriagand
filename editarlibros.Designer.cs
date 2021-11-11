@@ -392,6 +392,7 @@ namespace proyectolibreriaOF1
             this.dgv_editarlibros.DataSource = this.libroBindingSource;
             this.dgv_editarlibros.Location = new System.Drawing.Point(294, 211);
             this.dgv_editarlibros.Name = "dgv_editarlibros";
+            this.dgv_editarlibros.ReadOnly = true;
             this.dgv_editarlibros.RowHeadersWidth = 51;
             this.dgv_editarlibros.Size = new System.Drawing.Size(1153, 369);
             this.dgv_editarlibros.TabIndex = 38;
