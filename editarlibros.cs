@@ -212,10 +212,11 @@ namespace proyectolibreriaOF1
                         DB.libro.Attach(modelo);
                     DB.libro.Remove(modelo);
                     DB.SaveChanges();
+                    clear();
+                    llenarGrid();
+                    MessageBox.Show("¡Se elimino correctamente!");
                 }
-            clear();
-            llenarGrid();
-            MessageBox.Show("¡Se elimino correctamente!");
+            MessageBox.Show("¡No se elimino el contenido!");
         }
     }
 }
