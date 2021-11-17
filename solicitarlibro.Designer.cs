@@ -43,7 +43,9 @@ namespace proyectolibreriaOF1
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_limpiar = new System.Windows.Forms.Button();
             this.fondo = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip2
@@ -133,7 +135,7 @@ namespace proyectolibreriaOF1
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(172, 252);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 7;
@@ -153,7 +155,7 @@ namespace proyectolibreriaOF1
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(172, 226);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(136, 20);
             this.textBox3.TabIndex = 22;
@@ -165,7 +167,7 @@ namespace proyectolibreriaOF1
             this.btn_guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_guardar.Location = new System.Drawing.Point(71, 292);
-            this.btn_guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_guardar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(237, 30);
             this.btn_guardar.TabIndex = 43;
@@ -179,7 +181,7 @@ namespace proyectolibreriaOF1
             this.btn_limpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_limpiar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_limpiar.Location = new System.Drawing.Point(71, 326);
-            this.btn_limpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_limpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.Size = new System.Drawing.Size(237, 30);
             this.btn_limpiar.TabIndex = 42;
@@ -195,12 +197,21 @@ namespace proyectolibreriaOF1
             this.fondo.TabIndex = 51;
             this.fondo.Click += new System.EventHandler(this.fondo_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(449, 197);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(945, 336);
+            this.dataGridView1.TabIndex = 52;
+            // 
             // solicitarlibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(1424, 570);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_limpiar);
             this.Controls.Add(this.genero);
@@ -211,12 +222,13 @@ namespace proyectolibreriaOF1
             this.Controls.Add(this.TituloLibreria2);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.fondo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "solicitarlibro";
             this.Text = "Sistema de Libreria - Solictar Libros";
             this.Load += new System.EventHandler(this.solicitarlibro_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +249,6 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Button btn_limpiar;
         private System.Windows.Forms.Label fondo;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

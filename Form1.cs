@@ -31,7 +31,7 @@ namespace proyectolibreriaOF1
             this.ventasTableAdapter.Fill(this.libreriagandtablas.ventas);
             // TODO: esta línea de código carga datos en la tabla 'libreriagandtablas.inventario' Puede moverla o quitarla según sea necesario.
             this.inventarioTableAdapter.Fill(this.libreriagandtablas.inventario);
-
+            this.FormClosed += new FormClosedEventHandler(cerrarform);      //Cierra formulario
         }
 
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,6 +67,11 @@ namespace proyectolibreriaOF1
             resgistrar_inventario f2 = new resgistrar_inventario();
             f2.Show();
            
+        }
+
+        private void cerrarform(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void inventarioBindingNavigator_RefreshItems(object sender, EventArgs e)

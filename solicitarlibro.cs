@@ -17,6 +17,11 @@ namespace proyectolibreriaOF1
             InitializeComponent();
         }
 
+        private void solicitarlibro_Load(object sender, EventArgs e)
+        {
+            this.FormClosed += new FormClosedEventHandler(cerrarform);      //Cierra formulario
+        }
+
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -46,12 +51,12 @@ namespace proyectolibreriaOF1
             f2.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void cerrarform(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void solicitarlibro_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

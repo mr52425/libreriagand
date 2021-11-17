@@ -24,7 +24,7 @@ namespace proyectolibreriaOF1
 
         private void resgistrar_inventario_Load(object sender, EventArgs e)
         {
-
+            this.FormClosed += new FormClosedEventHandler(cerrarform);      //Cierra formulario
         }
 
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,6 +54,11 @@ namespace proyectolibreriaOF1
             this.Hide();
             editarlibros f2 = new editarlibros();
             f2.Show();
+        }
+
+        private void cerrarform(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void label1_Click_1(object sender, EventArgs e)

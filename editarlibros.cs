@@ -26,6 +26,7 @@ namespace proyectolibreriaOF1
             llenarGrid();
             clear();
             this.ActiveControl = txtnombre;
+            this.FormClosed += new FormClosedEventHandler(cerrarform);      //Cierra formulario
         }
 
         private void solicitarLibrosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,6 +57,11 @@ namespace proyectolibreriaOF1
             f2.Show();
         }
 
+        private void cerrarform(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -76,6 +82,17 @@ namespace proyectolibreriaOF1
 
         }
 
+        private void lbl_fecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tiempo_Tick(object sender, EventArgs e)
+        {
+            lbl_fecha.Text = DateTime.Now.ToLongDateString();
+            lbl_hora.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             try
@@ -90,11 +107,11 @@ namespace proyectolibreriaOF1
                 modelo.paginas = int.Parse(txtpaginas.Text.Trim());
                 modelo.precio = decimal.Parse(txtprecio.Text.Trim());
                 modelo.sipnosis = txtsipnosis.Text.Trim();
-                if (txtnombre.Text.Trim() == "")
+                if (modelo.nom_libro == "")
                 {
                     MessageBox.Show("¡Por favor digite el nombre del libro!", "Mensaje de Advertencia.");
                 }
-                if (txtautor.Text.Trim() == "")
+                if (txtautor.Text == "")
                 {
                     MessageBox.Show("¡Por favor digite el nombre del autor!");
                 }
@@ -145,7 +162,7 @@ namespace proyectolibreriaOF1
                     MessageBox.Show("¡Regsitro guardado con exito!", "Mensaje de Confirmación.");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("¡Por favor digite los valores que se piden!", "Mensaje de Advertencia.");
             }
@@ -158,7 +175,7 @@ namespace proyectolibreriaOF1
 
         void clear()
         {
-            txtnombre.Text = txtautor.Text = txtgenero.Text = txteditorial.Text = txtedicion.Text = txtaño.Text = txtidioma.Text = txtpaginas.Text = txtprecio.Text = txtsipnosis.Text = "";
+            txtnombre.Text = txtautor.Text = txtgenero.Text = txteditorial.Text = txtedicion.Text = txtaño.Text = txtidioma.Text = txtpaginas.Text = txtprecio.Text = txtsipnosis.Text = txtbuscar.Text = "";
             btn_guardar.Text = "Guardar";
             btn_eliminar.Enabled = false;
             modelo.id_libro = 0;
@@ -218,5 +235,28 @@ namespace proyectolibreriaOF1
                 }
             MessageBox.Show("¡No se elimino el contenido!", "Mensaje de Cancelación.");
         }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Int32 keyword = int.Parse(txtbuscar.Text.Trim());
+                using (libreriagandEntities1 DB = new libreriagandEntities1())
+                {
+                    dgv_editarlibros.DataSource = DB.libro.Where(y => y.id_libro.Equals(keyword)).ToList();
+                }
+                clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            llenarGrid();
+        }
+
     }
 }
