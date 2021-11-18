@@ -30,9 +30,9 @@ namespace proyectolibreriaOF1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.solicitarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,17 +63,6 @@ namespace proyectolibreriaOF1
             this.txtsipnosis = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_editarlibros = new System.Windows.Forms.DataGridView();
-            this.idlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edicionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.añoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idiomaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paginasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sipnosisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.libroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.libreriagandtablas = new proyectolibreriaOF1.libreriagandtablas();
             this.Intruccion1 = new System.Windows.Forms.Label();
@@ -89,6 +78,17 @@ namespace proyectolibreriaOF1
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.lbl_hora = new System.Windows.Forms.Label();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
+            this.idlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edicionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.añoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idiomaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paginasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sipnosisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_editarlibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).BeginInit();
@@ -400,14 +400,14 @@ namespace proyectolibreriaOF1
             this.dgv_editarlibros.AutoGenerateColumns = false;
             this.dgv_editarlibros.BackgroundColor = System.Drawing.Color.BurlyWood;
             this.dgv_editarlibros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_editarlibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_editarlibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_editarlibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_editarlibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idlibroDataGridViewTextBoxColumn,
@@ -428,100 +428,23 @@ namespace proyectolibreriaOF1
             this.dgv_editarlibros.Name = "dgv_editarlibros";
             this.dgv_editarlibros.ReadOnly = true;
             this.dgv_editarlibros.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_editarlibros.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_editarlibros.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_editarlibros.RowHeadersWidth = 51;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.BurlyWood;
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgv_editarlibros.RowsDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgv_editarlibros.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_editarlibros.Size = new System.Drawing.Size(1153, 369);
             this.dgv_editarlibros.TabIndex = 38;
             this.dgv_editarlibros.DoubleClick += new System.EventHandler(this.dgv_editarlibros_DoubleClick);
-            // 
-            // idlibroDataGridViewTextBoxColumn
-            // 
-            this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "id_libro";
-            this.idlibroDataGridViewTextBoxColumn.HeaderText = "id_libro";
-            this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
-            this.idlibroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomlibroDataGridViewTextBoxColumn
-            // 
-            this.nomlibroDataGridViewTextBoxColumn.DataPropertyName = "nom_libro";
-            this.nomlibroDataGridViewTextBoxColumn.HeaderText = "Nombre del libro";
-            this.nomlibroDataGridViewTextBoxColumn.Name = "nomlibroDataGridViewTextBoxColumn";
-            this.nomlibroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // autorDataGridViewTextBoxColumn
-            // 
-            this.autorDataGridViewTextBoxColumn.DataPropertyName = "autor";
-            this.autorDataGridViewTextBoxColumn.HeaderText = "autor";
-            this.autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
-            this.autorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // generoDataGridViewTextBoxColumn
-            // 
-            this.generoDataGridViewTextBoxColumn.DataPropertyName = "genero";
-            this.generoDataGridViewTextBoxColumn.HeaderText = "genero";
-            this.generoDataGridViewTextBoxColumn.Name = "generoDataGridViewTextBoxColumn";
-            this.generoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // editorialDataGridViewTextBoxColumn
-            // 
-            this.editorialDataGridViewTextBoxColumn.DataPropertyName = "editorial";
-            this.editorialDataGridViewTextBoxColumn.HeaderText = "editorial";
-            this.editorialDataGridViewTextBoxColumn.Name = "editorialDataGridViewTextBoxColumn";
-            this.editorialDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // edicionDataGridViewTextBoxColumn
-            // 
-            this.edicionDataGridViewTextBoxColumn.DataPropertyName = "edicion";
-            this.edicionDataGridViewTextBoxColumn.HeaderText = "edicion";
-            this.edicionDataGridViewTextBoxColumn.Name = "edicionDataGridViewTextBoxColumn";
-            this.edicionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // añoDataGridViewTextBoxColumn
-            // 
-            this.añoDataGridViewTextBoxColumn.DataPropertyName = "año";
-            this.añoDataGridViewTextBoxColumn.HeaderText = "año";
-            this.añoDataGridViewTextBoxColumn.Name = "añoDataGridViewTextBoxColumn";
-            this.añoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idiomaDataGridViewTextBoxColumn
-            // 
-            this.idiomaDataGridViewTextBoxColumn.DataPropertyName = "idioma";
-            this.idiomaDataGridViewTextBoxColumn.HeaderText = "idioma";
-            this.idiomaDataGridViewTextBoxColumn.Name = "idiomaDataGridViewTextBoxColumn";
-            this.idiomaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // paginasDataGridViewTextBoxColumn
-            // 
-            this.paginasDataGridViewTextBoxColumn.DataPropertyName = "paginas";
-            this.paginasDataGridViewTextBoxColumn.HeaderText = "paginas";
-            this.paginasDataGridViewTextBoxColumn.Name = "paginasDataGridViewTextBoxColumn";
-            this.paginasDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sipnosisDataGridViewTextBoxColumn
-            // 
-            this.sipnosisDataGridViewTextBoxColumn.DataPropertyName = "sipnosis";
-            this.sipnosisDataGridViewTextBoxColumn.HeaderText = "sipnosis";
-            this.sipnosisDataGridViewTextBoxColumn.Name = "sipnosisDataGridViewTextBoxColumn";
-            this.sipnosisDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // libroBindingSource
             // 
@@ -685,6 +608,83 @@ namespace proyectolibreriaOF1
             this.Tiempo.Enabled = true;
             this.Tiempo.Tick += new System.EventHandler(this.Tiempo_Tick);
             // 
+            // idlibroDataGridViewTextBoxColumn
+            // 
+            this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "id_libro";
+            this.idlibroDataGridViewTextBoxColumn.HeaderText = "ID del libro";
+            this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
+            this.idlibroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomlibroDataGridViewTextBoxColumn
+            // 
+            this.nomlibroDataGridViewTextBoxColumn.DataPropertyName = "nom_libro";
+            this.nomlibroDataGridViewTextBoxColumn.HeaderText = "Nombre del libro";
+            this.nomlibroDataGridViewTextBoxColumn.Name = "nomlibroDataGridViewTextBoxColumn";
+            this.nomlibroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // autorDataGridViewTextBoxColumn
+            // 
+            this.autorDataGridViewTextBoxColumn.DataPropertyName = "autor";
+            this.autorDataGridViewTextBoxColumn.HeaderText = "Nombre del autor";
+            this.autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
+            this.autorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // generoDataGridViewTextBoxColumn
+            // 
+            this.generoDataGridViewTextBoxColumn.DataPropertyName = "genero";
+            this.generoDataGridViewTextBoxColumn.HeaderText = "Género";
+            this.generoDataGridViewTextBoxColumn.Name = "generoDataGridViewTextBoxColumn";
+            this.generoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // editorialDataGridViewTextBoxColumn
+            // 
+            this.editorialDataGridViewTextBoxColumn.DataPropertyName = "editorial";
+            this.editorialDataGridViewTextBoxColumn.HeaderText = "Editorial";
+            this.editorialDataGridViewTextBoxColumn.Name = "editorialDataGridViewTextBoxColumn";
+            this.editorialDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // edicionDataGridViewTextBoxColumn
+            // 
+            this.edicionDataGridViewTextBoxColumn.DataPropertyName = "edicion";
+            this.edicionDataGridViewTextBoxColumn.HeaderText = "Edición";
+            this.edicionDataGridViewTextBoxColumn.Name = "edicionDataGridViewTextBoxColumn";
+            this.edicionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // añoDataGridViewTextBoxColumn
+            // 
+            this.añoDataGridViewTextBoxColumn.DataPropertyName = "año";
+            this.añoDataGridViewTextBoxColumn.HeaderText = "Año";
+            this.añoDataGridViewTextBoxColumn.Name = "añoDataGridViewTextBoxColumn";
+            this.añoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idiomaDataGridViewTextBoxColumn
+            // 
+            this.idiomaDataGridViewTextBoxColumn.DataPropertyName = "idioma";
+            this.idiomaDataGridViewTextBoxColumn.HeaderText = "Idioma";
+            this.idiomaDataGridViewTextBoxColumn.Name = "idiomaDataGridViewTextBoxColumn";
+            this.idiomaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // paginasDataGridViewTextBoxColumn
+            // 
+            this.paginasDataGridViewTextBoxColumn.DataPropertyName = "paginas";
+            this.paginasDataGridViewTextBoxColumn.HeaderText = "Páginas";
+            this.paginasDataGridViewTextBoxColumn.Name = "paginasDataGridViewTextBoxColumn";
+            this.paginasDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sipnosisDataGridViewTextBoxColumn
+            // 
+            this.sipnosisDataGridViewTextBoxColumn.DataPropertyName = "sipnosis";
+            this.sipnosisDataGridViewTextBoxColumn.HeaderText = "Sipnosis";
+            this.sipnosisDataGridViewTextBoxColumn.Name = "sipnosisDataGridViewTextBoxColumn";
+            this.sipnosisDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // editarlibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -785,6 +785,9 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Button btn_actualizar;
+        private System.Windows.Forms.Label lbl_fecha;
+        private System.Windows.Forms.Label lbl_hora;
+        private System.Windows.Forms.Timer Tiempo;
         private System.Windows.Forms.DataGridViewTextBoxColumn idlibroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomlibroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn autorDataGridViewTextBoxColumn;
@@ -796,8 +799,5 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.DataGridViewTextBoxColumn paginasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sipnosisDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label lbl_fecha;
-        private System.Windows.Forms.Label lbl_hora;
-        private System.Windows.Forms.Timer Tiempo;
     }
 }

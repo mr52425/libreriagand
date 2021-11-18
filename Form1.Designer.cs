@@ -31,9 +31,9 @@ namespace proyectolibreriaOF1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
             this.libreriagandtablas = new proyectolibreriaOF1.libreriagandtablas();
             this.inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.inventarioTableAdapter = new proyectolibreriaOF1.libreriagandtablasTableAdapters.inventarioTableAdapter();
@@ -68,6 +68,9 @@ namespace proyectolibreriaOF1
             this.TituloLibreria5 = new System.Windows.Forms.Label();
             this.TituloCompras = new System.Windows.Forms.Label();
             this.Intruccion2 = new System.Windows.Forms.Label();
+            this.lbl_hora = new System.Windows.Forms.Label();
+            this.lbl_fecha = new System.Windows.Forms.Label();
+            this.Tiempo = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.libreriagandtablas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingNavigator)).BeginInit();
@@ -255,29 +258,33 @@ namespace proyectolibreriaOF1
             // 
             // editarLibrosToolStripMenuItem
             // 
+            this.editarLibrosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editarLibrosToolStripMenuItem.Name = "editarLibrosToolStripMenuItem";
-            this.editarLibrosToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.editarLibrosToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.editarLibrosToolStripMenuItem.Text = "Editar Libros";
             this.editarLibrosToolStripMenuItem.Click += new System.EventHandler(this.editarLibrosToolStripMenuItem_Click);
             // 
             // solicitarLibrosToolStripMenuItem
             // 
+            this.solicitarLibrosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.solicitarLibrosToolStripMenuItem.Name = "solicitarLibrosToolStripMenuItem";
-            this.solicitarLibrosToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.solicitarLibrosToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.solicitarLibrosToolStripMenuItem.Text = "Solicitar Libros";
             this.solicitarLibrosToolStripMenuItem.Click += new System.EventHandler(this.solicitarLibrosToolStripMenuItem_Click);
             // 
             // registrarToolStripMenuItem
             // 
+            this.registrarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(131, 20);
             this.registrarToolStripMenuItem.Text = "Registrar Inventario";
             this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem
             // 
+            this.consultarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(118, 20);
             this.consultarToolStripMenuItem.Text = "Consultar Clientes";
             this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
@@ -290,14 +297,14 @@ namespace proyectolibreriaOF1
             this.ventasDataGridView.AutoGenerateColumns = false;
             this.ventasDataGridView.BackgroundColor = System.Drawing.Color.BurlyWood;
             this.ventasDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ventasDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ventasDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
             this.ventasDataGridView.ColumnHeadersHeight = 29;
             this.ventasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.ventasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -311,23 +318,23 @@ namespace proyectolibreriaOF1
             this.ventasDataGridView.EnableHeadersVisualStyles = false;
             this.ventasDataGridView.GridColor = System.Drawing.Color.SaddleBrown;
             this.ventasDataGridView.Location = new System.Drawing.Point(28, 232);
-            this.ventasDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ventasDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.ventasDataGridView.Name = "ventasDataGridView";
             this.ventasDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ventasDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ventasDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle38;
             this.ventasDataGridView.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.BurlyWood;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.ventasDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.Black;
+            this.ventasDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle39;
             this.ventasDataGridView.RowTemplate.Height = 24;
             this.ventasDataGridView.Size = new System.Drawing.Size(804, 401);
             this.ventasDataGridView.TabIndex = 2;
@@ -419,12 +426,45 @@ namespace proyectolibreriaOF1
             this.Intruccion2.Text = "Listado de las compras registradas:";
             this.Intruccion2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lbl_hora
+            // 
+            this.lbl_hora.AutoSize = true;
+            this.lbl_hora.BackColor = System.Drawing.Color.Maroon;
+            this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.ForeColor = System.Drawing.SystemColors.Window;
+            this.lbl_hora.Location = new System.Drawing.Point(738, 39);
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.Size = new System.Drawing.Size(77, 31);
+            this.lbl_hora.TabIndex = 55;
+            this.lbl_hora.Text = "Hora";
+            // 
+            // lbl_fecha
+            // 
+            this.lbl_fecha.AutoSize = true;
+            this.lbl_fecha.BackColor = System.Drawing.Color.Maroon;
+            this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha.ForeColor = System.Drawing.SystemColors.Window;
+            this.lbl_fecha.Location = new System.Drawing.Point(607, 5);
+            this.lbl_fecha.Name = "lbl_fecha";
+            this.lbl_fecha.Size = new System.Drawing.Size(51, 16);
+            this.lbl_fecha.TabIndex = 56;
+            this.lbl_fecha.Text = "Fecha";
+            this.lbl_fecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_fecha.Click += new System.EventHandler(this.lbl_fecha_Click);
+            // 
+            // Tiempo
+            // 
+            this.Tiempo.Enabled = true;
+            this.Tiempo.Tick += new System.EventHandler(this.Tiempo_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(861, 659);
+            this.Controls.Add(this.lbl_hora);
+            this.Controls.Add(this.lbl_fecha);
             this.Controls.Add(this.Intruccion2);
             this.Controls.Add(this.TituloCompras);
             this.Controls.Add(this.TituloLibreria5);
@@ -432,7 +472,7 @@ namespace proyectolibreriaOF1
             this.Controls.Add(this.ventasDataGridView);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Sistema de Libreria - Consultar Compras";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -446,6 +486,7 @@ namespace proyectolibreriaOF1
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ventasDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -485,6 +526,9 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.Label TituloLibreria5;
         private System.Windows.Forms.Label TituloCompras;
         private System.Windows.Forms.Label Intruccion2;
+        private System.Windows.Forms.Label lbl_hora;
+        private System.Windows.Forms.Label lbl_fecha;
+        private System.Windows.Forms.Timer Tiempo;
     }
 }
 

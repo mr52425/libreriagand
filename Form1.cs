@@ -84,6 +84,15 @@ namespace proyectolibreriaOF1
             
         }
 
-       
+        private void lbl_fecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tiempo_Tick(object sender, EventArgs e)
+        {
+            lbl_fecha.Text = DateTime.Now.ToLongDateString();
+            lbl_hora.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
     }
 }

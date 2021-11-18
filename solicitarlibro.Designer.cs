@@ -29,6 +29,7 @@ namespace proyectolibreriaOF1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.editarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +45,9 @@ namespace proyectolibreriaOF1
             this.btn_limpiar = new System.Windows.Forms.Button();
             this.fondo = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lbl_hora = new System.Windows.Forms.Label();
+            this.lbl_fecha = new System.Windows.Forms.Label();
+            this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -205,12 +209,44 @@ namespace proyectolibreriaOF1
             this.dataGridView1.Size = new System.Drawing.Size(945, 336);
             this.dataGridView1.TabIndex = 52;
             // 
+            // lbl_hora
+            // 
+            this.lbl_hora.AutoSize = true;
+            this.lbl_hora.BackColor = System.Drawing.Color.Maroon;
+            this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.ForeColor = System.Drawing.SystemColors.Window;
+            this.lbl_hora.Location = new System.Drawing.Point(1280, 33);
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.Size = new System.Drawing.Size(91, 37);
+            this.lbl_hora.TabIndex = 53;
+            this.lbl_hora.Text = "Hora";
+            // 
+            // lbl_fecha
+            // 
+            this.lbl_fecha.AutoSize = true;
+            this.lbl_fecha.BackColor = System.Drawing.Color.Maroon;
+            this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha.ForeColor = System.Drawing.SystemColors.Window;
+            this.lbl_fecha.Location = new System.Drawing.Point(1075, 0);
+            this.lbl_fecha.Name = "lbl_fecha";
+            this.lbl_fecha.Size = new System.Drawing.Size(69, 24);
+            this.lbl_fecha.TabIndex = 54;
+            this.lbl_fecha.Text = "Fecha";
+            this.lbl_fecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Tiempo
+            // 
+            this.Tiempo.Enabled = true;
+            this.Tiempo.Tick += new System.EventHandler(this.Tiempo_Tick);
+            // 
             // solicitarlibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(1424, 570);
+            this.Controls.Add(this.lbl_hora);
+            this.Controls.Add(this.lbl_fecha);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_limpiar);
@@ -250,5 +286,8 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.Button btn_limpiar;
         private System.Windows.Forms.Label fondo;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lbl_hora;
+        private System.Windows.Forms.Label lbl_fecha;
+        private System.Windows.Forms.Timer Tiempo;
     }
 }

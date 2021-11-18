@@ -159,7 +159,7 @@ namespace proyectolibreriaOF1
                     }
                     clear();
                     llenarGrid();
-                    MessageBox.Show("¡Regsitro guardado con exito!", "Mensaje de Confirmación.");
+                    MessageBox.Show("¡Regsitro guardado con éxito!", "Mensaje de Confirmación.");
                 }
             }
             catch (Exception)
@@ -220,7 +220,7 @@ namespace proyectolibreriaOF1
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Estas seguro de eliminar este registro?", "Mensaje de Advertencia.",
+            if (MessageBox.Show("¿Estás seguro de eliminar este registro?", "Mensaje de Advertencia.",
                 MessageBoxButtons.YesNo) == DialogResult.Yes)
                 using (libreriagandEntities1 DB = new libreriagandEntities1())
                 {
@@ -231,9 +231,12 @@ namespace proyectolibreriaOF1
                     DB.SaveChanges();
                     clear();
                     llenarGrid();
-                    MessageBox.Show("¡Se elimino correctamente!", "Mensaje de Confirmación.");
+                    MessageBox.Show("¡Se eliminó correctamente!", "Mensaje de Confirmación.");
                 }
-            MessageBox.Show("¡No se elimino el contenido!", "Mensaje de Cancelación.");
+            else
+            {
+                MessageBox.Show("¡No se eliminó el contenido!", "Mensaje de Cancelación.");
+            }
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
@@ -247,9 +250,9 @@ namespace proyectolibreriaOF1
                 }
                 clear();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("¡Por favor digite el valor que se pide!", "Mensaje de Advertencia.");
             }
         }
 
