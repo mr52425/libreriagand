@@ -31,9 +31,9 @@ namespace proyectolibreriaOF1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consultarcliente));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.editarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.solicitarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,6 +68,9 @@ namespace proyectolibreriaOF1
             this.TituloLibreria4 = new System.Windows.Forms.Label();
             this.TituloClientes = new System.Windows.Forms.Label();
             this.Intruccion2 = new System.Windows.Forms.Label();
+            this.lbl_hora = new System.Windows.Forms.Label();
+            this.lbl_fecha = new System.Windows.Forms.Label();
+            this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.libreriagandtablas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
@@ -279,14 +282,14 @@ namespace proyectolibreriaOF1
             this.clienteDataGridView.AutoGenerateColumns = false;
             this.clienteDataGridView.BackgroundColor = System.Drawing.Color.BurlyWood;
             this.clienteDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.clienteDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.clienteDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.clienteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -304,20 +307,20 @@ namespace proyectolibreriaOF1
             this.clienteDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.clienteDataGridView.Name = "clienteDataGridView";
             this.clienteDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.clienteDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.clienteDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.clienteDataGridView.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.BurlyWood;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.clienteDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.clienteDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.clienteDataGridView.RowTemplate.Height = 24;
             this.clienteDataGridView.Size = new System.Drawing.Size(1040, 422);
             this.clienteDataGridView.TabIndex = 9;
@@ -396,7 +399,7 @@ namespace proyectolibreriaOF1
             this.TituloLibreria4.Name = "TituloLibreria4";
             this.TituloLibreria4.Size = new System.Drawing.Size(1091, 70);
             this.TituloLibreria4.TabIndex = 16;
-            this.TituloLibreria4.Text = "Sistema de Libreria";
+            this.TituloLibreria4.Text = "Sistema de Librería";
             this.TituloLibreria4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TituloClientes
@@ -424,12 +427,44 @@ namespace proyectolibreriaOF1
             this.Intruccion2.Text = "Listado de los clientes registrados:";
             this.Intruccion2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lbl_hora
+            // 
+            this.lbl_hora.AutoSize = true;
+            this.lbl_hora.BackColor = System.Drawing.Color.Maroon;
+            this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.ForeColor = System.Drawing.SystemColors.Window;
+            this.lbl_hora.Location = new System.Drawing.Point(948, 33);
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.Size = new System.Drawing.Size(91, 37);
+            this.lbl_hora.TabIndex = 55;
+            this.lbl_hora.Text = "Hora";
+            // 
+            // lbl_fecha
+            // 
+            this.lbl_fecha.AutoSize = true;
+            this.lbl_fecha.BackColor = System.Drawing.Color.Maroon;
+            this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha.ForeColor = System.Drawing.SystemColors.Window;
+            this.lbl_fecha.Location = new System.Drawing.Point(745, 0);
+            this.lbl_fecha.Name = "lbl_fecha";
+            this.lbl_fecha.Size = new System.Drawing.Size(69, 24);
+            this.lbl_fecha.TabIndex = 56;
+            this.lbl_fecha.Text = "Fecha";
+            this.lbl_fecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Tiempo
+            // 
+            this.Tiempo.Enabled = true;
+            this.Tiempo.Tick += new System.EventHandler(this.Tiempo_Tick);
+            // 
             // consultarcliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(1091, 675);
+            this.Controls.Add(this.lbl_hora);
+            this.Controls.Add(this.lbl_fecha);
             this.Controls.Add(this.Intruccion2);
             this.Controls.Add(this.TituloClientes);
             this.Controls.Add(this.TituloLibreria4);
@@ -449,6 +484,7 @@ namespace proyectolibreriaOF1
             this.clienteBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -488,5 +524,8 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.Label TituloLibreria4;
         private System.Windows.Forms.Label TituloClientes;
         private System.Windows.Forms.Label Intruccion2;
+        private System.Windows.Forms.Label lbl_hora;
+        private System.Windows.Forms.Label lbl_fecha;
+        private System.Windows.Forms.Timer Tiempo;
     }
 }

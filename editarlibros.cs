@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace proyectolibreriaOF1
 {
     public partial class editarlibros : Form
     {
+        libro modelo = new libro();
         public editarlibros()
         {
             InitializeComponent();
@@ -19,7 +21,12 @@ namespace proyectolibreriaOF1
 
         private void editarlibros_Load(object sender, EventArgs e)
         {
-
+            // TODO: esta línea de código carga datos en la tabla 'libreriagandtablas.libro' Puede moverla o quitarla según sea necesario.
+            this.libroTableAdapter.Fill(this.libreriagandtablas.libro);
+            llenarGrid();
+            clear();
+            this.ActiveControl = txtnombre;
+            this.FormClosed += new FormClosedEventHandler(cerrarform);      //Cierra formulario
         }
 
         private void solicitarLibrosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,6 +57,11 @@ namespace proyectolibreriaOF1
             f2.Show();
         }
 
+        private void cerrarform(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -70,9 +82,184 @@ namespace proyectolibreriaOF1
 
         }
 
-        private void btn_agregar_Click(object sender, EventArgs e)
+        private void lbl_fecha_Click(object sender, EventArgs e)
         {
-            
+
         }
+
+        private void Tiempo_Tick(object sender, EventArgs e)
+        {
+            lbl_fecha.Text = DateTime.Now.ToLongDateString();
+            lbl_hora.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                modelo.nom_libro = txtnombre.Text.Trim();
+                modelo.autor = txtautor.Text.Trim();
+                modelo.genero = txtgenero.Text.Trim();
+                modelo.editorial = txteditorial.Text.Trim();
+                modelo.edicion = txtedicion.Text.Trim();
+                modelo.año = int.Parse(txtaño.Text.Trim());
+                modelo.idioma = txtidioma.Text.Trim();
+                modelo.paginas = int.Parse(txtpaginas.Text.Trim());
+                modelo.precio = decimal.Parse(txtprecio.Text.Trim());
+                modelo.sipnosis = txtsipnosis.Text.Trim();
+                if (modelo.nom_libro == "")
+                {
+                    MessageBox.Show("¡Por favor digite el nombre del libro!", "Mensaje de Advertencia.");
+                }
+                if (txtautor.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el nombre del autor!");
+                }
+                if (txtgenero.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el genero del libro!");
+                }
+                if (txteditorial.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el nombre de la editorial del libro!");
+                }
+                if (txtedicion.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el número de la edición del libro!");
+                }
+                if (txtaño.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el año del libro!");
+                }
+                if (txtidioma.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el idioma del libro!");
+                }
+                if (txtpaginas.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el número de páginas del libro!");
+                }
+                if (txtprecio.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el precio del libro!");
+                }
+                if (txtsipnosis.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite la sipnosis del libro!", "Mensaje de Advertencia.");
+                }
+                else
+                {
+                    using (libreriagandEntities1 DB = new libreriagandEntities1())
+                    {
+                        if (modelo.id_libro == 0)//insertar
+                            DB.libro.Add(modelo);
+                        else //modificar
+                            DB.Entry(modelo).State = EntityState.Modified;
+                        DB.SaveChanges();
+                    }
+                    clear();
+                    llenarGrid();
+                    MessageBox.Show("¡Regsitro guardado con éxito!", "Mensaje de Confirmación.");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("¡Por favor digite los valores que se piden!", "Mensaje de Advertencia.");
+            }
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        void clear()
+        {
+            txtnombre.Text = txtautor.Text = txtgenero.Text = txteditorial.Text = txtedicion.Text = txtaño.Text = txtidioma.Text = txtpaginas.Text = txtprecio.Text = txtsipnosis.Text = txtbuscar.Text = "";
+            btn_guardar.Text = "Guardar";
+            btn_eliminar.Enabled = false;
+            modelo.id_libro = 0;
+        }
+
+        void llenarGrid()
+        {
+            dgv_editarlibros.AutoGenerateColumns = false;
+            using (libreriagandEntities1 DB = new libreriagandEntities1())
+            {
+                dgv_editarlibros.DataSource = DB.libro.ToList<libro>();
+            }
+        }
+
+        private void dgv_editarlibros_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                modelo.id_libro = Convert.ToInt32(dgv_editarlibros.CurrentRow.Cells["idlibroDataGridViewTextBoxColumn"].Value);
+                using (libreriagandEntities1 DB = new libreriagandEntities1())
+                {
+                    modelo = DB.libro.Where(x => x.id_libro == modelo.id_libro).FirstOrDefault();
+                    txtnombre.Text = modelo.nom_libro;
+                    txtautor.Text = modelo.autor;
+                    txtgenero.Text = modelo.genero;
+                    txteditorial.Text = modelo.editorial;
+                    txtedicion.Text = modelo.edicion;
+                    txtaño.Text = Convert.ToString(modelo.año);
+                    txtidioma.Text = modelo.idioma;
+                    txtpaginas.Text = Convert.ToString(modelo.paginas);
+                    txtprecio.Text = Convert.ToString(modelo.precio);
+                    txtsipnosis.Text = modelo.sipnosis;
+                }
+                btn_guardar.Text = "Modificar";
+                btn_eliminar.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Estás seguro de eliminar este registro?", "Mensaje de Advertencia.",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+                using (libreriagandEntities1 DB = new libreriagandEntities1())
+                {
+                    var entry = DB.Entry(modelo);
+                    if (entry.State == EntityState.Detached)
+                        DB.libro.Attach(modelo);
+                    DB.libro.Remove(modelo);
+                    DB.SaveChanges();
+                    clear();
+                    llenarGrid();
+                    MessageBox.Show("¡Se eliminó correctamente!", "Mensaje de Confirmación.");
+                }
+            else
+            {
+                MessageBox.Show("¡No se eliminó el contenido!", "Mensaje de Cancelación.");
+            }
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Int32 keyword = int.Parse(txtbuscar.Text.Trim());
+                using (libreriagandEntities1 DB = new libreriagandEntities1())
+                {
+                    dgv_editarlibros.DataSource = DB.libro.Where(y => y.id_libro.Equals(keyword)).ToList();
+                }
+                clear();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("¡Por favor digite el valor que se pide!", "Mensaje de Advertencia.");
+            }
+        }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            llenarGrid();
+        }
+
     }
 }

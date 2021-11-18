@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="libreriagandModel1StoreContainer" CdmEntityContainer="libreriagandEntities1">
+    <EntitySetMapping Name="cliente">
+      <EntityTypeMapping TypeName="libreriagandModel1.cliente">
+        <MappingFragment StoreEntitySet="cliente">
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="nom_cliente" ColumnName="nom_cliente" />
+          <ScalarProperty Name="ape_cliente" ColumnName="ape_cliente" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="tipo_cliente" ColumnName="tipo_cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inventario">
+      <EntityTypeMapping TypeName="libreriagandModel1.inventario">
+        <MappingFragment StoreEntitySet="inventario">
+          <ScalarProperty Name="id_inventario" ColumnName="id_inventario" />
+          <ScalarProperty Name="id_libro" ColumnName="id_libro" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="libro">
+      <EntityTypeMapping TypeName="libreriagandModel1.libro">
+        <MappingFragment StoreEntitySet="libro">
+          <ScalarProperty Name="id_libro" ColumnName="id_libro" />
+          <ScalarProperty Name="nom_libro" ColumnName="nom_libro" />
+          <ScalarProperty Name="autor" ColumnName="autor" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="editorial" ColumnName="editorial" />
+          <ScalarProperty Name="edicion" ColumnName="edicion" />
+          <ScalarProperty Name="año" ColumnName="año" />
+          <ScalarProperty Name="idioma" ColumnName="idioma" />
+          <ScalarProperty Name="paginas" ColumnName="paginas" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="sipnosis" ColumnName="sipnosis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ventas">
+      <EntityTypeMapping TypeName="libreriagandModel1.ventas">
+        <MappingFragment StoreEntitySet="ventas">
+          <ScalarProperty Name="id_compra" ColumnName="id_compra" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="id_libro" ColumnName="id_libro" />
+          <ScalarProperty Name="id_inventario" ColumnName="id_inventario" />
+          <ScalarProperty Name="precio_venta" ColumnName="precio_venta" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

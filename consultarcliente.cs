@@ -21,7 +21,7 @@ namespace proyectolibreriaOF1
         {
             // TODO: esta línea de código carga datos en la tabla 'libreriagandtablas.cliente' Puede moverla o quitarla según sea necesario.
             this.clienteTableAdapter.Fill(this.libreriagandtablas.cliente);
-
+            this.FormClosed += new FormClosedEventHandler(cerrarform);      //Cierra formulario
         }
 
         private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -58,6 +58,17 @@ namespace proyectolibreriaOF1
             this.Hide();
             resgistrar_inventario f2 = new resgistrar_inventario();
             f2.Show();
+        }
+
+        private void cerrarform(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Tiempo_Tick(object sender, EventArgs e)
+        {
+            lbl_fecha.Text = DateTime.Now.ToLongDateString();
+            lbl_hora.Text = DateTime.Now.ToString("HH:mm:ss");
         }
     }
 }
