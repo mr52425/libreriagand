@@ -91,3 +91,8 @@ C:\Users\Diego\OneDrive\Libreria\libreriagand\obj\Debug\proyectolibreriaOF1.cspr
 C:\Users\Diego\OneDrive\Libreria\libreriagand\obj\Debug\proyectolibreriaOF1.csproj.CopyComplete
 C:\Users\Diego\OneDrive\Libreria\libreriagand\obj\Debug\proyectolibreriaOF1.exe
 C:\Users\Diego\OneDrive\Libreria\libreriagand\obj\Debug\proyectolibreriaOF1.pdb
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\bin\Debug\EntityFramework.dll
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\bin\Debug\EntityFramework.xml
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LUIS\Documents\Proyecto Librería Ghandi\libreriagand\obj\Debug\proyectolibreriaOF1.csproj.CopyComplete
