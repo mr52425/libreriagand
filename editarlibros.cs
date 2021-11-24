@@ -261,5 +261,9 @@ namespace proyectolibreriaOF1
             llenarGrid();
         }
 
+        private void txtnombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
