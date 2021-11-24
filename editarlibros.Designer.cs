@@ -63,6 +63,17 @@ namespace proyectolibreriaOF1
             this.txtsipnosis = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_editarlibros = new System.Windows.Forms.DataGridView();
+            this.idlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edicionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.añoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idiomaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paginasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sipnosisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.libroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.libreriagandtablas = new proyectolibreriaOF1.libreriagandtablas();
             this.Intruccion1 = new System.Windows.Forms.Label();
@@ -78,17 +89,6 @@ namespace proyectolibreriaOF1
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.lbl_hora = new System.Windows.Forms.Label();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
-            this.idlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edicionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.añoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idiomaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paginasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sipnosisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_editarlibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).BeginInit();
@@ -106,10 +106,10 @@ namespace proyectolibreriaOF1
             this.registrarToolStripMenuItem,
             this.consultarToolStripMenuItem,
             this.consultarComprasToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 70);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 86);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1459, 30);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1945, 37);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -117,7 +117,7 @@ namespace proyectolibreriaOF1
             // 
             this.solicitarLibrosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.solicitarLibrosToolStripMenuItem.Name = "solicitarLibrosToolStripMenuItem";
-            this.solicitarLibrosToolStripMenuItem.Size = new System.Drawing.Size(97, 26);
+            this.solicitarLibrosToolStripMenuItem.Size = new System.Drawing.Size(122, 33);
             this.solicitarLibrosToolStripMenuItem.Text = "Solictar Libros";
             this.solicitarLibrosToolStripMenuItem.Click += new System.EventHandler(this.solicitarLibrosToolStripMenuItem_Click);
             // 
@@ -125,7 +125,7 @@ namespace proyectolibreriaOF1
             // 
             this.registrarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(163, 33);
             this.registrarToolStripMenuItem.Text = "Registrar Inventario";
             this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
@@ -133,7 +133,7 @@ namespace proyectolibreriaOF1
             // 
             this.consultarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(118, 26);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(149, 33);
             this.consultarToolStripMenuItem.Text = "Consultar Clientes";
             this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
@@ -143,7 +143,7 @@ namespace proyectolibreriaOF1
             this.consultarComprasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultarComprasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.consultarComprasToolStripMenuItem.Name = "consultarComprasToolStripMenuItem";
-            this.consultarComprasToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.consultarComprasToolStripMenuItem.Size = new System.Drawing.Size(156, 33);
             this.consultarComprasToolStripMenuItem.Text = "Consultar Compras";
             this.consultarComprasToolStripMenuItem.Click += new System.EventHandler(this.consultarComprasToolStripMenuItem_Click);
             // 
@@ -152,10 +152,9 @@ namespace proyectolibreriaOF1
             this.TituloEditar.BackColor = System.Drawing.Color.Sienna;
             this.TituloEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TituloEditar.ForeColor = System.Drawing.SystemColors.Control;
-            this.TituloEditar.Location = new System.Drawing.Point(0, 100);
-            this.TituloEditar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TituloEditar.Location = new System.Drawing.Point(0, 123);
             this.TituloEditar.Name = "TituloEditar";
-            this.TituloEditar.Size = new System.Drawing.Size(1459, 64);
+            this.TituloEditar.Size = new System.Drawing.Size(1945, 79);
             this.TituloEditar.TabIndex = 4;
             this.TituloEditar.Text = "Editar Libros";
             this.TituloEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -164,10 +163,9 @@ namespace proyectolibreriaOF1
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(459, 307);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(612, 378);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.Size = new System.Drawing.Size(0, 17);
             this.label6.TabIndex = 13;
             // 
             // TituloLibreria1
@@ -177,8 +175,9 @@ namespace proyectolibreriaOF1
             this.TituloLibreria1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TituloLibreria1.ForeColor = System.Drawing.SystemColors.Control;
             this.TituloLibreria1.Location = new System.Drawing.Point(0, 0);
+            this.TituloLibreria1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TituloLibreria1.Name = "TituloLibreria1";
-            this.TituloLibreria1.Size = new System.Drawing.Size(1459, 70);
+            this.TituloLibreria1.Size = new System.Drawing.Size(1924, 86);
             this.TituloLibreria1.TabIndex = 15;
             this.TituloLibreria1.Text = "Sistema de Librería";
             this.TituloLibreria1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,10 +185,9 @@ namespace proyectolibreriaOF1
             // nombre
             // 
             this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre.Location = new System.Drawing.Point(17, 226);
-            this.nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nombre.Location = new System.Drawing.Point(23, 278);
             this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(72, 20);
+            this.nombre.Size = new System.Drawing.Size(96, 25);
             this.nombre.TabIndex = 17;
             this.nombre.Text = "Nombre: ";
             this.nombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,19 +195,19 @@ namespace proyectolibreriaOF1
             // txtnombre
             // 
             this.txtnombre.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.txtnombre.Location = new System.Drawing.Point(121, 226);
-            this.txtnombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtnombre.Location = new System.Drawing.Point(161, 278);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(136, 20);
+            this.txtnombre.Size = new System.Drawing.Size(180, 22);
             this.txtnombre.TabIndex = 16;
+            this.txtnombre.TextChanged += new System.EventHandler(this.txtnombre_TextChanged);
             // 
             // genero
             // 
             this.genero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genero.Location = new System.Drawing.Point(17, 274);
-            this.genero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.genero.Location = new System.Drawing.Point(23, 337);
             this.genero.Name = "genero";
-            this.genero.Size = new System.Drawing.Size(72, 20);
+            this.genero.Size = new System.Drawing.Size(96, 25);
             this.genero.TabIndex = 21;
             this.genero.Text = "Genero:";
             this.genero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -217,19 +215,18 @@ namespace proyectolibreriaOF1
             // txtgenero
             // 
             this.txtgenero.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.txtgenero.Location = new System.Drawing.Point(121, 274);
-            this.txtgenero.Margin = new System.Windows.Forms.Padding(2);
+            this.txtgenero.Location = new System.Drawing.Point(161, 337);
+            this.txtgenero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtgenero.Name = "txtgenero";
-            this.txtgenero.Size = new System.Drawing.Size(136, 20);
+            this.txtgenero.Size = new System.Drawing.Size(180, 22);
             this.txtgenero.TabIndex = 20;
             // 
             // autor
             // 
             this.autor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autor.Location = new System.Drawing.Point(17, 250);
-            this.autor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.autor.Location = new System.Drawing.Point(23, 308);
             this.autor.Name = "autor";
-            this.autor.Size = new System.Drawing.Size(72, 20);
+            this.autor.Size = new System.Drawing.Size(96, 25);
             this.autor.TabIndex = 19;
             this.autor.Text = "Autor:";
             this.autor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -237,19 +234,18 @@ namespace proyectolibreriaOF1
             // txtautor
             // 
             this.txtautor.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.txtautor.Location = new System.Drawing.Point(121, 250);
-            this.txtautor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtautor.Location = new System.Drawing.Point(161, 308);
+            this.txtautor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtautor.Name = "txtautor";
-            this.txtautor.Size = new System.Drawing.Size(136, 20);
+            this.txtautor.Size = new System.Drawing.Size(180, 22);
             this.txtautor.TabIndex = 18;
             // 
             // edicion
             // 
             this.edicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edicion.Location = new System.Drawing.Point(17, 322);
-            this.edicion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.edicion.Location = new System.Drawing.Point(23, 396);
             this.edicion.Name = "edicion";
-            this.edicion.Size = new System.Drawing.Size(72, 20);
+            this.edicion.Size = new System.Drawing.Size(96, 25);
             this.edicion.TabIndex = 25;
             this.edicion.Text = "Edición: ";
             this.edicion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -258,20 +254,19 @@ namespace proyectolibreriaOF1
             // txtedicion
             // 
             this.txtedicion.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.txtedicion.Location = new System.Drawing.Point(121, 322);
-            this.txtedicion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtedicion.Location = new System.Drawing.Point(161, 396);
+            this.txtedicion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtedicion.Name = "txtedicion";
-            this.txtedicion.Size = new System.Drawing.Size(136, 20);
+            this.txtedicion.Size = new System.Drawing.Size(180, 22);
             this.txtedicion.TabIndex = 24;
             this.txtedicion.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // editorial
             // 
             this.editorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editorial.Location = new System.Drawing.Point(17, 298);
-            this.editorial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.editorial.Location = new System.Drawing.Point(23, 367);
             this.editorial.Name = "editorial";
-            this.editorial.Size = new System.Drawing.Size(72, 20);
+            this.editorial.Size = new System.Drawing.Size(96, 25);
             this.editorial.TabIndex = 23;
             this.editorial.Text = "Editorial:";
             this.editorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -279,19 +274,18 @@ namespace proyectolibreriaOF1
             // txteditorial
             // 
             this.txteditorial.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.txteditorial.Location = new System.Drawing.Point(121, 298);
-            this.txteditorial.Margin = new System.Windows.Forms.Padding(2);
+            this.txteditorial.Location = new System.Drawing.Point(161, 367);
+            this.txteditorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txteditorial.Name = "txteditorial";
-            this.txteditorial.Size = new System.Drawing.Size(136, 20);
+            this.txteditorial.Size = new System.Drawing.Size(180, 22);
             this.txteditorial.TabIndex = 22;
             // 
             // idioma
             // 
             this.idioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idioma.Location = new System.Drawing.Point(17, 370);
-            this.idioma.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.idioma.Location = new System.Drawing.Point(23, 455);
             this.idioma.Name = "idioma";
-            this.idioma.Size = new System.Drawing.Size(72, 20);
+            this.idioma.Size = new System.Drawing.Size(96, 25);
             this.idioma.TabIndex = 29;
             this.idioma.Text = "Idioma:";
             this.idioma.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -299,19 +293,18 @@ namespace proyectolibreriaOF1
             // txtidioma
             // 
             this.txtidioma.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.txtidioma.Location = new System.Drawing.Point(121, 370);
-            this.txtidioma.Margin = new System.Windows.Forms.Padding(2);
+            this.txtidioma.Location = new System.Drawing.Point(161, 455);
+            this.txtidioma.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtidioma.Name = "txtidioma";
-            this.txtidioma.Size = new System.Drawing.Size(136, 20);
+            this.txtidioma.Size = new System.Drawing.Size(180, 22);
             this.txtidioma.TabIndex = 28;
             // 
             // año
             // 
             this.año.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.año.Location = new System.Drawing.Point(17, 346);
-            this.año.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.año.Location = new System.Drawing.Point(23, 426);
             this.año.Name = "año";
-            this.año.Size = new System.Drawing.Size(72, 20);
+            this.año.Size = new System.Drawing.Size(96, 25);
             this.año.TabIndex = 27;
             this.año.Text = "Año:";
             this.año.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -319,19 +312,18 @@ namespace proyectolibreriaOF1
             // txtaño
             // 
             this.txtaño.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.txtaño.Location = new System.Drawing.Point(121, 346);
-            this.txtaño.Margin = new System.Windows.Forms.Padding(2);
+            this.txtaño.Location = new System.Drawing.Point(161, 426);
+            this.txtaño.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtaño.Name = "txtaño";
-            this.txtaño.Size = new System.Drawing.Size(136, 20);
+            this.txtaño.Size = new System.Drawing.Size(180, 22);
             this.txtaño.TabIndex = 26;
             // 
             // precio
             // 
             this.precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precio.Location = new System.Drawing.Point(17, 418);
-            this.precio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.precio.Location = new System.Drawing.Point(23, 514);
             this.precio.Name = "precio";
-            this.precio.Size = new System.Drawing.Size(72, 20);
+            this.precio.Size = new System.Drawing.Size(96, 25);
             this.precio.TabIndex = 33;
             this.precio.Text = "Precio:";
             this.precio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -339,19 +331,18 @@ namespace proyectolibreriaOF1
             // txtprecio
             // 
             this.txtprecio.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.txtprecio.Location = new System.Drawing.Point(121, 418);
-            this.txtprecio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtprecio.Location = new System.Drawing.Point(161, 514);
+            this.txtprecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(136, 20);
+            this.txtprecio.Size = new System.Drawing.Size(180, 22);
             this.txtprecio.TabIndex = 32;
             // 
             // paginas
             // 
             this.paginas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paginas.Location = new System.Drawing.Point(17, 394);
-            this.paginas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.paginas.Location = new System.Drawing.Point(23, 485);
             this.paginas.Name = "paginas";
-            this.paginas.Size = new System.Drawing.Size(72, 20);
+            this.paginas.Size = new System.Drawing.Size(96, 25);
             this.paginas.TabIndex = 31;
             this.paginas.Text = "Páginas:";
             this.paginas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -359,19 +350,18 @@ namespace proyectolibreriaOF1
             // txtpaginas
             // 
             this.txtpaginas.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.txtpaginas.Location = new System.Drawing.Point(121, 394);
-            this.txtpaginas.Margin = new System.Windows.Forms.Padding(2);
+            this.txtpaginas.Location = new System.Drawing.Point(161, 485);
+            this.txtpaginas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtpaginas.Name = "txtpaginas";
-            this.txtpaginas.Size = new System.Drawing.Size(136, 20);
+            this.txtpaginas.Size = new System.Drawing.Size(180, 22);
             this.txtpaginas.TabIndex = 30;
             // 
             // sipnosis
             // 
             this.sipnosis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sipnosis.Location = new System.Drawing.Point(17, 442);
-            this.sipnosis.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.sipnosis.Location = new System.Drawing.Point(23, 544);
             this.sipnosis.Name = "sipnosis";
-            this.sipnosis.Size = new System.Drawing.Size(72, 20);
+            this.sipnosis.Size = new System.Drawing.Size(96, 25);
             this.sipnosis.TabIndex = 35;
             this.sipnosis.Text = "Sipnosis:";
             this.sipnosis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -379,19 +369,20 @@ namespace proyectolibreriaOF1
             // txtsipnosis
             // 
             this.txtsipnosis.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.txtsipnosis.Location = new System.Drawing.Point(121, 442);
-            this.txtsipnosis.Margin = new System.Windows.Forms.Padding(2);
+            this.txtsipnosis.Location = new System.Drawing.Point(161, 544);
+            this.txtsipnosis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtsipnosis.Name = "txtsipnosis";
-            this.txtsipnosis.Size = new System.Drawing.Size(136, 20);
+            this.txtsipnosis.Size = new System.Drawing.Size(180, 22);
             this.txtsipnosis.TabIndex = 34;
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Peru;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(275, 164);
+            this.label3.Location = new System.Drawing.Point(367, 202);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1184, 439);
+            this.label3.Size = new System.Drawing.Size(1579, 540);
             this.label3.TabIndex = 37;
             // 
             // dgv_editarlibros
@@ -408,6 +399,7 @@ namespace proyectolibreriaOF1
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_editarlibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_editarlibros.ColumnHeadersHeight = 29;
             this.dgv_editarlibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_editarlibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idlibroDataGridViewTextBoxColumn,
@@ -424,7 +416,8 @@ namespace proyectolibreriaOF1
             this.dgv_editarlibros.DataSource = this.libroBindingSource;
             this.dgv_editarlibros.EnableHeadersVisualStyles = false;
             this.dgv_editarlibros.GridColor = System.Drawing.Color.SaddleBrown;
-            this.dgv_editarlibros.Location = new System.Drawing.Point(294, 211);
+            this.dgv_editarlibros.Location = new System.Drawing.Point(392, 260);
+            this.dgv_editarlibros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_editarlibros.Name = "dgv_editarlibros";
             this.dgv_editarlibros.ReadOnly = true;
             this.dgv_editarlibros.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -442,9 +435,108 @@ namespace proyectolibreriaOF1
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SandyBrown;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgv_editarlibros.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_editarlibros.Size = new System.Drawing.Size(1153, 369);
+            this.dgv_editarlibros.Size = new System.Drawing.Size(1537, 454);
             this.dgv_editarlibros.TabIndex = 38;
             this.dgv_editarlibros.DoubleClick += new System.EventHandler(this.dgv_editarlibros_DoubleClick);
+            // 
+            // idlibroDataGridViewTextBoxColumn
+            // 
+            this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "id_libro";
+            this.idlibroDataGridViewTextBoxColumn.HeaderText = "ID del libro";
+            this.idlibroDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
+            this.idlibroDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idlibroDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nomlibroDataGridViewTextBoxColumn
+            // 
+            this.nomlibroDataGridViewTextBoxColumn.DataPropertyName = "nom_libro";
+            this.nomlibroDataGridViewTextBoxColumn.HeaderText = "Nombre del libro";
+            this.nomlibroDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomlibroDataGridViewTextBoxColumn.Name = "nomlibroDataGridViewTextBoxColumn";
+            this.nomlibroDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomlibroDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // autorDataGridViewTextBoxColumn
+            // 
+            this.autorDataGridViewTextBoxColumn.DataPropertyName = "autor";
+            this.autorDataGridViewTextBoxColumn.HeaderText = "Nombre del autor";
+            this.autorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
+            this.autorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.autorDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // generoDataGridViewTextBoxColumn
+            // 
+            this.generoDataGridViewTextBoxColumn.DataPropertyName = "genero";
+            this.generoDataGridViewTextBoxColumn.HeaderText = "Género";
+            this.generoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.generoDataGridViewTextBoxColumn.Name = "generoDataGridViewTextBoxColumn";
+            this.generoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.generoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // editorialDataGridViewTextBoxColumn
+            // 
+            this.editorialDataGridViewTextBoxColumn.DataPropertyName = "editorial";
+            this.editorialDataGridViewTextBoxColumn.HeaderText = "Editorial";
+            this.editorialDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.editorialDataGridViewTextBoxColumn.Name = "editorialDataGridViewTextBoxColumn";
+            this.editorialDataGridViewTextBoxColumn.ReadOnly = true;
+            this.editorialDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // edicionDataGridViewTextBoxColumn
+            // 
+            this.edicionDataGridViewTextBoxColumn.DataPropertyName = "edicion";
+            this.edicionDataGridViewTextBoxColumn.HeaderText = "Edición";
+            this.edicionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.edicionDataGridViewTextBoxColumn.Name = "edicionDataGridViewTextBoxColumn";
+            this.edicionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.edicionDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // añoDataGridViewTextBoxColumn
+            // 
+            this.añoDataGridViewTextBoxColumn.DataPropertyName = "año";
+            this.añoDataGridViewTextBoxColumn.HeaderText = "Año";
+            this.añoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.añoDataGridViewTextBoxColumn.Name = "añoDataGridViewTextBoxColumn";
+            this.añoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.añoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idiomaDataGridViewTextBoxColumn
+            // 
+            this.idiomaDataGridViewTextBoxColumn.DataPropertyName = "idioma";
+            this.idiomaDataGridViewTextBoxColumn.HeaderText = "Idioma";
+            this.idiomaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idiomaDataGridViewTextBoxColumn.Name = "idiomaDataGridViewTextBoxColumn";
+            this.idiomaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idiomaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // paginasDataGridViewTextBoxColumn
+            // 
+            this.paginasDataGridViewTextBoxColumn.DataPropertyName = "paginas";
+            this.paginasDataGridViewTextBoxColumn.HeaderText = "Páginas";
+            this.paginasDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.paginasDataGridViewTextBoxColumn.Name = "paginasDataGridViewTextBoxColumn";
+            this.paginasDataGridViewTextBoxColumn.ReadOnly = true;
+            this.paginasDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precioDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sipnosisDataGridViewTextBoxColumn
+            // 
+            this.sipnosisDataGridViewTextBoxColumn.DataPropertyName = "sipnosis";
+            this.sipnosisDataGridViewTextBoxColumn.HeaderText = "Sipnosis";
+            this.sipnosisDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sipnosisDataGridViewTextBoxColumn.Name = "sipnosisDataGridViewTextBoxColumn";
+            this.sipnosisDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sipnosisDataGridViewTextBoxColumn.Width = 125;
             // 
             // libroBindingSource
             // 
@@ -459,10 +551,9 @@ namespace proyectolibreriaOF1
             // Intruccion1
             // 
             this.Intruccion1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Intruccion1.Location = new System.Drawing.Point(17, 172);
-            this.Intruccion1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Intruccion1.Location = new System.Drawing.Point(23, 212);
             this.Intruccion1.Name = "Intruccion1";
-            this.Intruccion1.Size = new System.Drawing.Size(240, 37);
+            this.Intruccion1.Size = new System.Drawing.Size(320, 46);
             this.Intruccion1.TabIndex = 39;
             this.Intruccion1.Text = "Introduce los datos del libro a editar:";
             this.Intruccion1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -471,10 +562,9 @@ namespace proyectolibreriaOF1
             // 
             this.Intruccion2.BackColor = System.Drawing.Color.Peru;
             this.Intruccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Intruccion2.Location = new System.Drawing.Point(291, 172);
-            this.Intruccion2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Intruccion2.Location = new System.Drawing.Point(388, 212);
             this.Intruccion2.Name = "Intruccion2";
-            this.Intruccion2.Size = new System.Drawing.Size(240, 37);
+            this.Intruccion2.Size = new System.Drawing.Size(320, 46);
             this.Intruccion2.TabIndex = 40;
             this.Intruccion2.Text = "Listado de los libros registrados:";
             this.Intruccion2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -486,10 +576,10 @@ namespace proyectolibreriaOF1
             this.btn_guardar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_guardar.Location = new System.Drawing.Point(20, 469);
-            this.btn_guardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_guardar.Location = new System.Drawing.Point(27, 577);
+            this.btn_guardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(237, 30);
+            this.btn_guardar.Size = new System.Drawing.Size(316, 37);
             this.btn_guardar.TabIndex = 42;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = false;
@@ -501,10 +591,10 @@ namespace proyectolibreriaOF1
             this.btn_eliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eliminar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_eliminar.Location = new System.Drawing.Point(20, 503);
-            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_eliminar.Location = new System.Drawing.Point(27, 619);
+            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(237, 30);
+            this.btn_eliminar.Size = new System.Drawing.Size(316, 37);
             this.btn_eliminar.TabIndex = 43;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = false;
@@ -516,10 +606,10 @@ namespace proyectolibreriaOF1
             this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_cancelar.Location = new System.Drawing.Point(20, 537);
-            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_cancelar.Location = new System.Drawing.Point(27, 661);
+            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(237, 30);
+            this.btn_cancelar.Size = new System.Drawing.Size(316, 37);
             this.btn_cancelar.TabIndex = 44;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
@@ -528,10 +618,10 @@ namespace proyectolibreriaOF1
             // txtbuscar
             // 
             this.txtbuscar.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.txtbuscar.Location = new System.Drawing.Point(1163, 179);
-            this.txtbuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtbuscar.Location = new System.Drawing.Point(1551, 220);
+            this.txtbuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(136, 20);
+            this.txtbuscar.Size = new System.Drawing.Size(180, 22);
             this.txtbuscar.TabIndex = 45;
             // 
             // btn_buscar
@@ -540,10 +630,10 @@ namespace proyectolibreriaOF1
             this.btn_buscar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_buscar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_buscar.Location = new System.Drawing.Point(1015, 173);
-            this.btn_buscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_buscar.Location = new System.Drawing.Point(1353, 213);
+            this.btn_buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(144, 30);
+            this.btn_buscar.Size = new System.Drawing.Size(192, 37);
             this.btn_buscar.TabIndex = 46;
             this.btn_buscar.Text = "Buscar por ID";
             this.btn_buscar.UseVisualStyleBackColor = false;
@@ -555,10 +645,10 @@ namespace proyectolibreriaOF1
             this.btn_actualizar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_actualizar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_actualizar.Location = new System.Drawing.Point(1303, 175);
-            this.btn_actualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_actualizar.Location = new System.Drawing.Point(1737, 215);
+            this.btn_actualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(144, 26);
+            this.btn_actualizar.Size = new System.Drawing.Size(192, 32);
             this.btn_actualizar.TabIndex = 47;
             this.btn_actualizar.Text = "Actualizar";
             this.btn_actualizar.UseVisualStyleBackColor = false;
@@ -583,9 +673,10 @@ namespace proyectolibreriaOF1
             this.lbl_fecha.BackColor = System.Drawing.Color.Maroon;
             this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbl_fecha.Location = new System.Drawing.Point(1113, 0);
+            this.lbl_fecha.Location = new System.Drawing.Point(1484, 0);
+            this.lbl_fecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(69, 24);
+            this.lbl_fecha.Size = new System.Drawing.Size(85, 29);
             this.lbl_fecha.TabIndex = 48;
             this.lbl_fecha.Text = "Fecha";
             this.lbl_fecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -597,9 +688,10 @@ namespace proyectolibreriaOF1
             this.lbl_hora.BackColor = System.Drawing.Color.Maroon;
             this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hora.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbl_hora.Location = new System.Drawing.Point(1316, 33);
+            this.lbl_hora.Location = new System.Drawing.Point(1755, 41);
+            this.lbl_hora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(91, 37);
+            this.lbl_hora.Size = new System.Drawing.Size(111, 46);
             this.lbl_hora.TabIndex = 0;
             this.lbl_hora.Text = "Hora";
             // 
@@ -608,89 +700,12 @@ namespace proyectolibreriaOF1
             this.Tiempo.Enabled = true;
             this.Tiempo.Tick += new System.EventHandler(this.Tiempo_Tick);
             // 
-            // idlibroDataGridViewTextBoxColumn
-            // 
-            this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "id_libro";
-            this.idlibroDataGridViewTextBoxColumn.HeaderText = "ID del libro";
-            this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
-            this.idlibroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomlibroDataGridViewTextBoxColumn
-            // 
-            this.nomlibroDataGridViewTextBoxColumn.DataPropertyName = "nom_libro";
-            this.nomlibroDataGridViewTextBoxColumn.HeaderText = "Nombre del libro";
-            this.nomlibroDataGridViewTextBoxColumn.Name = "nomlibroDataGridViewTextBoxColumn";
-            this.nomlibroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // autorDataGridViewTextBoxColumn
-            // 
-            this.autorDataGridViewTextBoxColumn.DataPropertyName = "autor";
-            this.autorDataGridViewTextBoxColumn.HeaderText = "Nombre del autor";
-            this.autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
-            this.autorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // generoDataGridViewTextBoxColumn
-            // 
-            this.generoDataGridViewTextBoxColumn.DataPropertyName = "genero";
-            this.generoDataGridViewTextBoxColumn.HeaderText = "Género";
-            this.generoDataGridViewTextBoxColumn.Name = "generoDataGridViewTextBoxColumn";
-            this.generoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // editorialDataGridViewTextBoxColumn
-            // 
-            this.editorialDataGridViewTextBoxColumn.DataPropertyName = "editorial";
-            this.editorialDataGridViewTextBoxColumn.HeaderText = "Editorial";
-            this.editorialDataGridViewTextBoxColumn.Name = "editorialDataGridViewTextBoxColumn";
-            this.editorialDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // edicionDataGridViewTextBoxColumn
-            // 
-            this.edicionDataGridViewTextBoxColumn.DataPropertyName = "edicion";
-            this.edicionDataGridViewTextBoxColumn.HeaderText = "Edición";
-            this.edicionDataGridViewTextBoxColumn.Name = "edicionDataGridViewTextBoxColumn";
-            this.edicionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // añoDataGridViewTextBoxColumn
-            // 
-            this.añoDataGridViewTextBoxColumn.DataPropertyName = "año";
-            this.añoDataGridViewTextBoxColumn.HeaderText = "Año";
-            this.añoDataGridViewTextBoxColumn.Name = "añoDataGridViewTextBoxColumn";
-            this.añoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idiomaDataGridViewTextBoxColumn
-            // 
-            this.idiomaDataGridViewTextBoxColumn.DataPropertyName = "idioma";
-            this.idiomaDataGridViewTextBoxColumn.HeaderText = "Idioma";
-            this.idiomaDataGridViewTextBoxColumn.Name = "idiomaDataGridViewTextBoxColumn";
-            this.idiomaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // paginasDataGridViewTextBoxColumn
-            // 
-            this.paginasDataGridViewTextBoxColumn.DataPropertyName = "paginas";
-            this.paginasDataGridViewTextBoxColumn.HeaderText = "Páginas";
-            this.paginasDataGridViewTextBoxColumn.Name = "paginasDataGridViewTextBoxColumn";
-            this.paginasDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sipnosisDataGridViewTextBoxColumn
-            // 
-            this.sipnosisDataGridViewTextBoxColumn.DataPropertyName = "sipnosis";
-            this.sipnosisDataGridViewTextBoxColumn.HeaderText = "Sipnosis";
-            this.sipnosisDataGridViewTextBoxColumn.Name = "sipnosisDataGridViewTextBoxColumn";
-            this.sipnosisDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // editarlibros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
-            this.ClientSize = new System.Drawing.Size(1459, 603);
+            this.ClientSize = new System.Drawing.Size(1924, 742);
             this.Controls.Add(this.lbl_hora);
             this.Controls.Add(this.lbl_fecha);
             this.Controls.Add(this.btn_actualizar);
@@ -727,7 +742,7 @@ namespace proyectolibreriaOF1
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TituloEditar);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "editarlibros";
             this.Text = "Sistema de Libreria - Editar Libros";
             this.Load += new System.EventHandler(this.editarlibros_Load);
