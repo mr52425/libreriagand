@@ -31,9 +31,9 @@ namespace proyectolibreriaOF1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consultarcliente));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.editarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.solicitarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,29 +99,33 @@ namespace proyectolibreriaOF1
             // 
             // editarLibrosToolStripMenuItem
             // 
+            this.editarLibrosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editarLibrosToolStripMenuItem.Name = "editarLibrosToolStripMenuItem";
-            this.editarLibrosToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.editarLibrosToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.editarLibrosToolStripMenuItem.Text = "Editar Libros";
             this.editarLibrosToolStripMenuItem.Click += new System.EventHandler(this.editarLibrosToolStripMenuItem_Click);
             // 
             // solicitarLibrosToolStripMenuItem
             // 
+            this.solicitarLibrosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.solicitarLibrosToolStripMenuItem.Name = "solicitarLibrosToolStripMenuItem";
-            this.solicitarLibrosToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.solicitarLibrosToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.solicitarLibrosToolStripMenuItem.Text = "Solicitar Libros";
             this.solicitarLibrosToolStripMenuItem.Click += new System.EventHandler(this.solicitarLibrosToolStripMenuItem_Click);
             // 
             // registrarInventarioToolStripMenuItem
             // 
+            this.registrarInventarioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registrarInventarioToolStripMenuItem.Name = "registrarInventarioToolStripMenuItem";
-            this.registrarInventarioToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.registrarInventarioToolStripMenuItem.Size = new System.Drawing.Size(131, 20);
             this.registrarInventarioToolStripMenuItem.Text = "Registrar Inventario";
             this.registrarInventarioToolStripMenuItem.Click += new System.EventHandler(this.registrarInventarioToolStripMenuItem_Click);
             // 
             // consultarComprasToolStripMenuItem
             // 
+            this.consultarComprasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultarComprasToolStripMenuItem.Name = "consultarComprasToolStripMenuItem";
-            this.consultarComprasToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.consultarComprasToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
             this.consultarComprasToolStripMenuItem.Text = "Consultar Compras";
             this.consultarComprasToolStripMenuItem.Click += new System.EventHandler(this.consultarComprasToolStripMenuItem_Click);
             // 
@@ -282,14 +286,14 @@ namespace proyectolibreriaOF1
             this.clienteDataGridView.AutoGenerateColumns = false;
             this.clienteDataGridView.BackgroundColor = System.Drawing.Color.BurlyWood;
             this.clienteDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.clienteDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.clienteDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.clienteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -307,20 +311,20 @@ namespace proyectolibreriaOF1
             this.clienteDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.clienteDataGridView.Name = "clienteDataGridView";
             this.clienteDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.clienteDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.clienteDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.clienteDataGridView.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.BurlyWood;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.clienteDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.clienteDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.clienteDataGridView.RowTemplate.Height = 24;
             this.clienteDataGridView.Size = new System.Drawing.Size(1040, 422);
             this.clienteDataGridView.TabIndex = 9;

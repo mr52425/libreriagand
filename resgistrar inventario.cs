@@ -132,11 +132,11 @@ namespace proyectolibreriaOF1
                 
                 if (id_libro.Text == "")
                 {
-                    MessageBox.Show("¡Por favor digite el nombre del autor!");
+                    MessageBox.Show("¡Por favor digite el ID del libro!", "Mensaje de Advertencia.");
                 }
                 if (cantidad.Text == "")
                 {
-                    MessageBox.Show("¡Por favor digite el genero del libro!");
+                    MessageBox.Show("¡Por favor digite la cantidad del libro!", "Mensaje de Advertencia.");
                 }
                 
                 else
@@ -154,14 +154,22 @@ namespace proyectolibreriaOF1
                     MessageBox.Show("¡Regsitro guardado con éxito!", "Mensaje de Confirmación.");
                 }
             }
-            catch (Exception ex)
+            catch (FormatException)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("¡Por favor digite los valores que se piden!", "Mensaje de Advertencia.");
+                if (id_libro.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite el ID del libro!", "Mensaje de Advertencia.");
+                }
+                if (cantidad.Text == "")
+                {
+                    MessageBox.Show("¡Por favor digite la cantidad del libro!", "Mensaje de Advertencia.");
+                }
             }
         }
         void clear()
         {
-            textBox_idinventario.Text = box_idlibro.Text = box_cantidad.Text = "";
+            textBox_idinventario.Text = box_idlibro.Text = box_cantidad.Text = txtbuscar.Text = "";
             btn_guardar.Text = "Guardar";
             btn_eliminar.Enabled = false;
             modelo.id_inventario = 0;
@@ -191,7 +199,6 @@ namespace proyectolibreriaOF1
                 using (libreriagandEntities1 DB = new libreriagandEntities1())
                 {
                     modelo = DB.inventario.Where(x => x.id_inventario == modelo.id_inventario).FirstOrDefault();
-                    
                     textBox_idinventario.Text = Convert.ToString(modelo.id_inventario);
                     box_idlibro.Text = Convert.ToString(modelo.id_libro);
                     box_cantidad.Text = Convert.ToString(modelo.cantidad);
@@ -217,6 +224,33 @@ namespace proyectolibreriaOF1
         }
 
         private void box_idlibro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Int32 keyword = int.Parse(txtbuscar.Text.Trim());
+                using (libreriagandEntities1 DB = new libreriagandEntities1())
+                {
+                    Grid_inventario.DataSource = DB.inventario.Where(y => y.id_inventario.Equals(keyword)).ToList();
+                }
+                clear();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("¡Por favor digite el valor que se pide!", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            llenarGrid();
+        }
+
+        private void lbl_fecha_Click(object sender, EventArgs e)
         {
 
         }

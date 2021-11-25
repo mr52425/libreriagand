@@ -107,64 +107,57 @@ namespace proyectolibreriaOF1
                 modelo.paginas = int.Parse(txtpaginas.Text.Trim());
                 modelo.precio = decimal.Parse(txtprecio.Text.Trim());
                 modelo.sipnosis = txtsipnosis.Text.Trim();
-                if (modelo.nom_libro == "")
+                using (libreriagandEntities1 DB = new libreriagandEntities1())
                 {
-                    MessageBox.Show("¡Por favor digite el nombre del libro!", "Mensaje de Advertencia.");
+                    if (modelo.id_libro == 0)//insertar
+                        DB.libro.Add(modelo);
+                    else //modificar
+                        DB.Entry(modelo).State = EntityState.Modified;
+                    DB.SaveChanges();
                 }
+                clear();
+                llenarGrid();
+                MessageBox.Show("¡Regsitro guardado con éxito!", "Mensaje de Confirmación.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("¡Por favor digite los valores que se piden!", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 if (txtautor.Text == "")
                 {
-                    MessageBox.Show("¡Por favor digite el nombre del autor!");
+                    MessageBox.Show("¡Por favor digite el nombre del autor!", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (txtgenero.Text == "")
                 {
-                    MessageBox.Show("¡Por favor digite el genero del libro!");
+                    MessageBox.Show("¡Por favor digite el genero del libro!", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (txteditorial.Text == "")
                 {
-                    MessageBox.Show("¡Por favor digite el nombre de la editorial del libro!");
+                    MessageBox.Show("¡Por favor digite el nombre de la editorial del libro!", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (txtedicion.Text == "")
                 {
-                    MessageBox.Show("¡Por favor digite el número de la edición del libro!");
+                    MessageBox.Show("¡Por favor digite el número de la edición del libro!", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (txtaño.Text == "")
                 {
-                    MessageBox.Show("¡Por favor digite el año del libro!");
+                    MessageBox.Show("¡Por favor digite el año del libro!", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (txtidioma.Text == "")
                 {
-                    MessageBox.Show("¡Por favor digite el idioma del libro!");
+                    MessageBox.Show("¡Por favor digite el idioma del libro!", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (txtpaginas.Text == "")
                 {
-                    MessageBox.Show("¡Por favor digite el número de páginas del libro!");
+                    MessageBox.Show("¡Por favor digite el número de páginas del libro!", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (txtprecio.Text == "")
                 {
-                    MessageBox.Show("¡Por favor digite el precio del libro!");
+                    MessageBox.Show("¡Por favor digite el precio del libro!", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (txtsipnosis.Text == "")
                 {
-                    MessageBox.Show("¡Por favor digite la sipnosis del libro!", "Mensaje de Advertencia.");
+                    MessageBox.Show("¡Por favor digite la sipnosis del libro!", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
-                {
-                    using (libreriagandEntities1 DB = new libreriagandEntities1())
-                    {
-                        if (modelo.id_libro == 0)//insertar
-                            DB.libro.Add(modelo);
-                        else //modificar
-                            DB.Entry(modelo).State = EntityState.Modified;
-                        DB.SaveChanges();
-                    }
-                    clear();
-                    llenarGrid();
-                    MessageBox.Show("¡Regsitro guardado con éxito!", "Mensaje de Confirmación.");
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("¡Por favor digite los valores que se piden!", "Mensaje de Advertencia.");
             }
         }
 
@@ -214,14 +207,14 @@ namespace proyectolibreriaOF1
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message + ".", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Estás seguro de eliminar este registro?", "Mensaje de Advertencia.",
-                MessageBoxButtons.YesNo) == DialogResult.Yes)
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 using (libreriagandEntities1 DB = new libreriagandEntities1())
                 {
                     var entry = DB.Entry(modelo);
@@ -231,11 +224,11 @@ namespace proyectolibreriaOF1
                     DB.SaveChanges();
                     clear();
                     llenarGrid();
-                    MessageBox.Show("¡Se eliminó correctamente!", "Mensaje de Confirmación.");
+                    MessageBox.Show("¡Se eliminó correctamente!", "Mensaje de Confirmación.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             else
             {
-                MessageBox.Show("¡No se eliminó el contenido!", "Mensaje de Cancelación.");
+                MessageBox.Show("¡No se eliminó el contenido!", "Mensaje de Cancelación.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -250,9 +243,9 @@ namespace proyectolibreriaOF1
                 }
                 clear();
             }
-            catch (Exception)
+            catch (FormatException)
             {
-                MessageBox.Show("¡Por favor digite el valor que se pide!", "Mensaje de Advertencia.");
+                MessageBox.Show("¡Por favor digite el valor que se pide!", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

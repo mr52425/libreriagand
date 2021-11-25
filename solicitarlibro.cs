@@ -86,7 +86,7 @@ namespace proyectolibreriaOF1
                 modelo.id_libro = Convert.ToInt32(dataGridView1.CurrentRow.Cells["idlibroDataGridViewTextBoxColumn"].Value);
                 using (libreriagandEntities1 DB = new libreriagandEntities1())
                 {
-                    if (MessageBox.Show("¿Estás seguro de realizar este pedido", "Mensaje de Advertencia.",
+                    if (MessageBox.Show("¿Estás seguro de realizar este pedido?", "Mensaje de Advertencia.",
                      MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         modelo = DB.libro.Where(x => x.id_libro == modelo.id_libro).FirstOrDefault();
@@ -120,7 +120,7 @@ namespace proyectolibreriaOF1
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message + ".", "Mensaje de Advertencia.");
             }
         }
 
@@ -138,6 +138,84 @@ namespace proyectolibreriaOF1
         {
             textBox2.Text = "";
             textBox3.Text = "";
+            clear();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        void clear()
+        {
+            txtbuscar1.Text = "";
+            txtbuscar2.Text = "";
+        }
+
+        void llenarGrid()
+        {
+            inventario modelo = new inventario();
+            dataGridView1.AutoGenerateColumns = false;
+            using (libreriagandEntities1 DB = new libreriagandEntities1())
+            {
+                dataGridView1.DataSource = DB.inventario.ToList<inventario>();
+            }
+        }
+
+        void llenarGrid2()
+        {
+            libro modelo = new libro();
+            dataGridView2.AutoGenerateColumns = false;
+            using (libreriagandEntities1 DB = new libreriagandEntities1())
+            {
+                dataGridView2.DataSource = DB.libro.ToList<libro>();
+            }
+        }
+
+        private void btn_buscar1_Click(object sender, EventArgs e)
+        {
+            inventario modelo = new inventario();
+            try
+            {
+                Int32 keyword = int.Parse(txtbuscar1.Text.Trim());
+                using (libreriagandEntities1 DB = new libreriagandEntities1())
+                {
+                    dataGridView1.DataSource = DB.inventario.Where(y => y.id_inventario.Equals(keyword)).ToList();
+                }
+                clear();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("¡Por favor digite el valor que se pide!", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_buscar2_Click(object sender, EventArgs e)
+        {
+            libro modelo = new libro();
+            try
+            {
+                Int32 keyword = int.Parse(txtbuscar2.Text.Trim());
+                using (libreriagandEntities1 DB = new libreriagandEntities1())
+                {
+                    dataGridView2.DataSource = DB.libro.Where(y => y.id_libro.Equals(keyword)).ToList();
+                }
+                clear();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("¡Por favor digite el valor que se pide!", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            llenarGrid();
+            llenarGrid2();
+        }
+
+        private void lbl_hora_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
