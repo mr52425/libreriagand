@@ -87,20 +87,21 @@ namespace proyectolibreriaOF1
                 using (libreriagandEntities1 DB = new libreriagandEntities1())
                 {
                     if (MessageBox.Show("¿Estás seguro de realizar este pedido?", "Mensaje de Advertencia.",
-                     MessageBoxButtons.YesNo) == DialogResult.Yes)
+                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         modelo = DB.libro.Where(x => x.id_libro == modelo.id_libro).FirstOrDefault();
-                        MessageBox.Show("Se a realizo el pedido del siguiente libro: " + modelo.nom_libro + "\n Autor: " + modelo.autor
-                            + "\n Genero: " + modelo.genero + "\n Editorial: " + modelo.editorial + "\n Edicion: " +
-                            modelo.edicion + "\n Precio: " + modelo.precio + "\n Con la siguiente cantidad: " + textBox3.Text + " \n Solicitud enviada el: " + textBox2.Text + " \n solicitud enviada al provedor gracias :)");
+                        MessageBox.Show("Se ha realizo el pedido del siguiente libro: " + modelo.nom_libro + "\n Autor: " + modelo.autor
+                            + "\n Género: " + modelo.genero + "\n Editorial: " + modelo.editorial + "\n Edicién: " +
+                            modelo.edicion + "\n Precio: " + modelo.precio + "\n Con la siguiente cantidad: " + textBox3.Text + " \n Solicitud enviada el: " + textBox2.Text + " \n ¡Solicitud enviada al provedor satisfactoriamente!",
+                            "Mensaje de Confirmación.", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
                         msg.To.Add("josuito.ramirez9@gmail.com");
-                        msg.Subject = "Solicitud de abastecimiento libreriasPrueba";
+                        msg.Subject = "Solicitud de Abastecimiento LibreriasPrueba";
                         msg.SubjectEncoding = System.Text.Encoding.UTF8;
                         msg.Body = "Solicitud del siguiente libro: " + modelo.nom_libro + "\n Autor: " + modelo.autor
-                            + "\n Genero: " + modelo.genero + "\n Editorial: " + modelo.editorial + "\n Edicion: " +
-                            modelo.edicion + "\n Precio: " + modelo.precio + "\n Con la siguiente cantidad: " + textBox3.Text + "\n Gracias esperamos su respuesta";
+                            + "\n Género: " + modelo.genero + "\n Editorial: " + modelo.editorial + "\n Edición: " +
+                            modelo.edicion + "\n Precio: " + modelo.precio + "\n Con la siguiente cantidad: " + textBox3.Text + "\n ¡Muchas gracias, esperamos su respuesta!";
                         msg.BodyEncoding = System.Text.Encoding.UTF8;
                         msg.IsBodyHtml = true;
                         msg.From = new System.Net.Mail.MailAddress("pruebasproyectoram9@gmail.com");
@@ -114,13 +115,16 @@ namespace proyectolibreriaOF1
 
                         cliente.Send(msg);
                     }
-
+                    else
+                    {
+                        MessageBox.Show("¡No se realizó el pedido!", "Mensaje de Cancelación.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
                 }
                 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message + ".", "Mensaje de Advertencia.");
+                MessageBox.Show("Error: " + ex.Message + ".", "Mensaje de Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

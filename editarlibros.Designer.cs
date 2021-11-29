@@ -30,9 +30,9 @@ namespace proyectolibreriaOF1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.solicitarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -401,14 +401,14 @@ namespace proyectolibreriaOF1
             this.dgv_editarlibros.AutoGenerateColumns = false;
             this.dgv_editarlibros.BackgroundColor = System.Drawing.Color.BurlyWood;
             this.dgv_editarlibros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_editarlibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_editarlibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_editarlibros.ColumnHeadersHeight = 29;
             this.dgv_editarlibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_editarlibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -430,20 +430,20 @@ namespace proyectolibreriaOF1
             this.dgv_editarlibros.Name = "dgv_editarlibros";
             this.dgv_editarlibros.ReadOnly = true;
             this.dgv_editarlibros.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_editarlibros.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_editarlibros.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_editarlibros.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.BurlyWood;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgv_editarlibros.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgv_editarlibros.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_editarlibros.Size = new System.Drawing.Size(1153, 369);
             this.dgv_editarlibros.TabIndex = 19;
             this.dgv_editarlibros.DoubleClick += new System.EventHandler(this.dgv_editarlibros_DoubleClick);
@@ -451,7 +451,7 @@ namespace proyectolibreriaOF1
             // idlibroDataGridViewTextBoxColumn
             // 
             this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "id_libro";
-            this.idlibroDataGridViewTextBoxColumn.HeaderText = "ID del libro";
+            this.idlibroDataGridViewTextBoxColumn.HeaderText = "ID del Libro";
             this.idlibroDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
             this.idlibroDataGridViewTextBoxColumn.ReadOnly = true;
@@ -460,7 +460,7 @@ namespace proyectolibreriaOF1
             // nomlibroDataGridViewTextBoxColumn
             // 
             this.nomlibroDataGridViewTextBoxColumn.DataPropertyName = "nom_libro";
-            this.nomlibroDataGridViewTextBoxColumn.HeaderText = "Nombre del libro";
+            this.nomlibroDataGridViewTextBoxColumn.HeaderText = "Nombre del Libro";
             this.nomlibroDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nomlibroDataGridViewTextBoxColumn.Name = "nomlibroDataGridViewTextBoxColumn";
             this.nomlibroDataGridViewTextBoxColumn.ReadOnly = true;
@@ -469,7 +469,7 @@ namespace proyectolibreriaOF1
             // autorDataGridViewTextBoxColumn
             // 
             this.autorDataGridViewTextBoxColumn.DataPropertyName = "autor";
-            this.autorDataGridViewTextBoxColumn.HeaderText = "Nombre del autor";
+            this.autorDataGridViewTextBoxColumn.HeaderText = "Nombre del Autor";
             this.autorDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
             this.autorDataGridViewTextBoxColumn.ReadOnly = true;
@@ -684,7 +684,7 @@ namespace proyectolibreriaOF1
             this.lbl_fecha.BackColor = System.Drawing.Color.Maroon;
             this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbl_fecha.Location = new System.Drawing.Point(1113, 0);
+            this.lbl_fecha.Location = new System.Drawing.Point(1125, 0);
             this.lbl_fecha.Name = "lbl_fecha";
             this.lbl_fecha.Size = new System.Drawing.Size(69, 24);
             this.lbl_fecha.TabIndex = 48;

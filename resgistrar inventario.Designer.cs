@@ -30,6 +30,9 @@ namespace proyectolibreriaOF1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.editarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.solicitarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -149,15 +152,42 @@ namespace proyectolibreriaOF1
             // Grid_inventario
             // 
             this.Grid_inventario.AutoGenerateColumns = false;
-            this.Grid_inventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid_inventario.BackgroundColor = System.Drawing.Color.BurlyWood;
+            this.Grid_inventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid_inventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.Grid_inventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Grid_inventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idinventarioDataGridViewTextBoxColumn,
             this.idlibroDataGridViewTextBoxColumn,
             this.cantidadDataGridViewTextBoxColumn});
             this.Grid_inventario.DataSource = this.inventarioBindingSource;
+            this.Grid_inventario.EnableHeadersVisualStyles = false;
+            this.Grid_inventario.GridColor = System.Drawing.Color.SaddleBrown;
             this.Grid_inventario.Location = new System.Drawing.Point(409, 198);
             this.Grid_inventario.Name = "Grid_inventario";
+            this.Grid_inventario.ReadOnly = true;
+            this.Grid_inventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid_inventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.Grid_inventario.RowHeadersWidth = 51;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.Grid_inventario.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.Grid_inventario.Size = new System.Drawing.Size(429, 327);
             this.Grid_inventario.TabIndex = 19;
             this.Grid_inventario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_registrar_inventario_CellContentClick);
@@ -166,25 +196,28 @@ namespace proyectolibreriaOF1
             // idinventarioDataGridViewTextBoxColumn
             // 
             this.idinventarioDataGridViewTextBoxColumn.DataPropertyName = "id_inventario";
-            this.idinventarioDataGridViewTextBoxColumn.HeaderText = "id_inventario";
+            this.idinventarioDataGridViewTextBoxColumn.HeaderText = "ID Inventario";
             this.idinventarioDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idinventarioDataGridViewTextBoxColumn.Name = "idinventarioDataGridViewTextBoxColumn";
+            this.idinventarioDataGridViewTextBoxColumn.ReadOnly = true;
             this.idinventarioDataGridViewTextBoxColumn.Width = 125;
             // 
             // idlibroDataGridViewTextBoxColumn
             // 
             this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "id_libro";
-            this.idlibroDataGridViewTextBoxColumn.HeaderText = "id_libro";
+            this.idlibroDataGridViewTextBoxColumn.HeaderText = "ID Libro";
             this.idlibroDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
+            this.idlibroDataGridViewTextBoxColumn.ReadOnly = true;
             this.idlibroDataGridViewTextBoxColumn.Width = 125;
             // 
             // cantidadDataGridViewTextBoxColumn
             // 
             this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
             this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
             this.cantidadDataGridViewTextBoxColumn.Width = 125;
             // 
             // inventarioBindingSource
@@ -280,7 +313,7 @@ namespace proyectolibreriaOF1
             this.lbl_hora.BackColor = System.Drawing.Color.Maroon;
             this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hora.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbl_hora.Location = new System.Drawing.Point(734, 33);
+            this.lbl_hora.Location = new System.Drawing.Point(735, 33);
             this.lbl_hora.Name = "lbl_hora";
             this.lbl_hora.Size = new System.Drawing.Size(91, 37);
             this.lbl_hora.TabIndex = 62;
@@ -292,7 +325,7 @@ namespace proyectolibreriaOF1
             this.lbl_fecha.BackColor = System.Drawing.Color.Maroon;
             this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbl_fecha.Location = new System.Drawing.Point(585, 0);
+            this.lbl_fecha.Location = new System.Drawing.Point(594, 0);
             this.lbl_fecha.Name = "lbl_fecha";
             this.lbl_fecha.Size = new System.Drawing.Size(59, 20);
             this.lbl_fecha.TabIndex = 63;
@@ -502,9 +535,6 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.BindingSource inventarioBindingSource;
         private libreriagandtablasTableAdapters.inventarioTableAdapter inventarioTableAdapter;
         private libreriagandtablasTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idinventarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idlibroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Button btn_cancelar;
@@ -514,5 +544,8 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idinventarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idlibroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
     }
 }

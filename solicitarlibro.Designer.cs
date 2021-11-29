@@ -30,6 +30,12 @@ namespace proyectolibreriaOF1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.editarLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -239,40 +245,70 @@ namespace proyectolibreriaOF1
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.BurlyWood;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idinventarioDataGridViewTextBoxColumn,
             this.idlibroDataGridViewTextBoxColumn,
             this.cantidadDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.inventarioBindingSource;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.SaddleBrown;
             this.dataGridView1.Location = new System.Drawing.Point(284, 204);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.Size = new System.Drawing.Size(429, 336);
             this.dataGridView1.TabIndex = 52;
             // 
             // idinventarioDataGridViewTextBoxColumn
             // 
             this.idinventarioDataGridViewTextBoxColumn.DataPropertyName = "id_inventario";
-            this.idinventarioDataGridViewTextBoxColumn.HeaderText = "id_inventario";
+            this.idinventarioDataGridViewTextBoxColumn.HeaderText = "ID Inventario";
             this.idinventarioDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idinventarioDataGridViewTextBoxColumn.Name = "idinventarioDataGridViewTextBoxColumn";
+            this.idinventarioDataGridViewTextBoxColumn.ReadOnly = true;
             this.idinventarioDataGridViewTextBoxColumn.Width = 125;
             // 
             // idlibroDataGridViewTextBoxColumn
             // 
             this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "id_libro";
-            this.idlibroDataGridViewTextBoxColumn.HeaderText = "id_libro";
+            this.idlibroDataGridViewTextBoxColumn.HeaderText = "ID Libro";
             this.idlibroDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
+            this.idlibroDataGridViewTextBoxColumn.ReadOnly = true;
             this.idlibroDataGridViewTextBoxColumn.Width = 125;
             // 
             // cantidadDataGridViewTextBoxColumn
             // 
             this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
             this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
             this.cantidadDataGridViewTextBoxColumn.Width = 125;
             // 
             // inventarioBindingSource
@@ -304,7 +340,7 @@ namespace proyectolibreriaOF1
             this.lbl_fecha.BackColor = System.Drawing.Color.Maroon;
             this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbl_fecha.Location = new System.Drawing.Point(732, 0);
+            this.lbl_fecha.Location = new System.Drawing.Point(749, 0);
             this.lbl_fecha.Name = "lbl_fecha";
             this.lbl_fecha.Size = new System.Drawing.Size(69, 24);
             this.lbl_fecha.TabIndex = 0;
@@ -323,15 +359,42 @@ namespace proyectolibreriaOF1
             // dataGridView2
             // 
             this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.BurlyWood;
+            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idlibroDataGridViewTextBoxColumn1,
             this.nomlibroDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.libroBindingSource;
+            this.dataGridView2.EnableHeadersVisualStyles = false;
+            this.dataGridView2.GridColor = System.Drawing.Color.SaddleBrown;
             this.dataGridView2.Location = new System.Drawing.Point(744, 204);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView2.RowHeadersWidth = 51;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(304, 336);
             this.dataGridView2.TabIndex = 5;
@@ -339,17 +402,19 @@ namespace proyectolibreriaOF1
             // idlibroDataGridViewTextBoxColumn1
             // 
             this.idlibroDataGridViewTextBoxColumn1.DataPropertyName = "id_libro";
-            this.idlibroDataGridViewTextBoxColumn1.HeaderText = "id_libro";
+            this.idlibroDataGridViewTextBoxColumn1.HeaderText = "ID Libro";
             this.idlibroDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.idlibroDataGridViewTextBoxColumn1.Name = "idlibroDataGridViewTextBoxColumn1";
+            this.idlibroDataGridViewTextBoxColumn1.ReadOnly = true;
             this.idlibroDataGridViewTextBoxColumn1.Width = 125;
             // 
             // nomlibroDataGridViewTextBoxColumn
             // 
             this.nomlibroDataGridViewTextBoxColumn.DataPropertyName = "nom_libro";
-            this.nomlibroDataGridViewTextBoxColumn.HeaderText = "nom_libro";
+            this.nomlibroDataGridViewTextBoxColumn.HeaderText = "Nombre del Libro";
             this.nomlibroDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nomlibroDataGridViewTextBoxColumn.Name = "nomlibroDataGridViewTextBoxColumn";
+            this.nomlibroDataGridViewTextBoxColumn.ReadOnly = true;
             this.nomlibroDataGridViewTextBoxColumn.Width = 125;
             // 
             // libroBindingSource
@@ -554,14 +619,9 @@ namespace proyectolibreriaOF1
         private libreriagandtablas libreriagandtablas;
         private System.Windows.Forms.BindingSource inventarioBindingSource;
         private libreriagandtablasTableAdapters.inventarioTableAdapter inventarioTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idinventarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idlibroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource libroBindingSource;
         private libreriagandtablasTableAdapters.libroTableAdapter libroTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idlibroDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomlibroDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label Intruccion2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Intruccion1;
@@ -572,5 +632,10 @@ namespace proyectolibreriaOF1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtbuscar2;
         private System.Windows.Forms.Button btn_buscar2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idlibroDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomlibroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idinventarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idlibroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
     }
 }
